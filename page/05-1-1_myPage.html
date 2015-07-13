@@ -1,0 +1,101 @@
+<style>
+    /*.lefticon {*/
+    /*width: 2em;*/
+    /*height: auto;*/
+    /*padding: 1em;*/
+
+    /*}*/
+
+    /*.ui-content-topdiv {*/
+    /*background-image: -moz-linear-gradient( 90deg, rgb(215,215,215) 0%, rgb(255,255,255) 100%);*/
+    /*background-image: -webkit-linear-gradient( 90deg, rgb(215,215,215) 0%, rgb(255,255,255) 100%);*/
+    /*background-image: -ms-linear-gradient( 90deg, rgb(215,215,215) 0%, rgb(255,255,255) 100%);*/
+    /*height: 10em;*/
+    /*margin: -1em;*/
+    /*text-align: center;*/
+    /*padding-bottom:3em;*/
+    /*}*/
+    .ui-content-topdiv img {
+        margin: 0 auto;
+        max-height: 100px;
+        max-width: 100px;
+    }
+
+    .ui-page-theme-a .ui-listview .ui-btn {
+
+        border-color: #cccccc;
+        color: #808080;
+        font-weight: normal;
+    }
+
+    /*.ui-listview > li h2 {*/
+    /*margin: 1.19em 0;*/
+    /*color: #808080;*/
+    /*}*/
+
+    .ui-grid-solo {
+        background-image: url("images/mypage/background.jpg");
+        background-size: cover;
+        height: 12em;
+        text-align: center;
+        padding-top: 2em;
+
+    }
+
+    .ui-grid-solo h2 {
+        color: #ffffff;
+        font-weight: normal;
+    }
+
+    .ui-grid-solo img {
+        width: 6em;
+    }
+
+    li .ui-btn {
+        background-color: #ffffff;
+    }
+    body,div[data-role="page"] {
+        background: #eee !important;
+        height:100%;
+    }
+
+</style>
+<div data-role="header" data-position="fixed">
+    <a href="#main" data-role="button" data-icon="home" data-iconpos="notext" data-theme="b"></a>
+
+    <h1>我的</h1>
+</div>
+<div role="main">
+    <div class="ui-grid-solo">
+        <div class="ui-block-a">
+            <a href="#myInfo"><img src="images/mypage/defaultuser.png"/></a>
+
+            <h2>用户名</h2>
+        </div>
+    </div>
+    <div>
+        <ul data-role="listview" data-icon="false">
+            <!--<li><a href="#myPoints"> <img class="ui-li-icon" src="images/mypage/myproperty.png">我的积分-->
+            <!--</a></li>-->
+            <!--<li><a href="#myorder"> <img class="ui-li-icon" src="images/mypage/myorder.png">我的订单-->
+            <!--</a></li>-->
+            <li><a href="#mymall"> <img class="ui-li-icon" src="images/mypage/myorder.png">个人商城
+            </a></li>
+            <li><a href="#mydevice"> <img class="ui-li-icon" src="images/mypage/myorder.png">设备管理
+            </a></li>
+            <li><a href="#userMessage"> <img class="ui-li-icon" src="images/mypage/mymessage.png">我的消息
+            </a></li>
+            <li><a href="#mySettings"> <img class="ui-li-icon" src="images/mypage/mysetting.png">我的设置
+            </a></li>
+            <li><a href="#feedback"> <img class="ui-li-icon" src="images/mypage/advice.png">意见反馈
+            </a></li>
+            <!--<li><a href="#update"> <img class="ui-li-icon" src="images/mypage/update.png">版本更新-->
+            <!--</a></li>-->
+            <li><a href="#aboutUs"> <img class="ui-li-icon" src="images/mypage/aboutus.png">关于我们
+            </a></li>
+        </ul>
+    </div>
+</div>
+</div>
+<!--</body>-->
+<!--</html>-->

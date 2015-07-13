@@ -1,0 +1,78 @@
+<!--  首页-->
+
+<style>
+    /*#cate_show .swiper-container{*/
+    /*height: 120px;*/
+    /*}*/
+    .ui-blue-radius {
+        background-image: -webkit-radial-gradient(center, ellipse closest-side, #3376c1 0%, #1e5a9d 100%);
+        background-image: -moz-radial-gradient(center, ellipse closest-side, #3376c1 0%, #1e5a9d 100%);
+        background-image: -o-radial-gradient(center, ellipse closest-side, #3376c1 0%, #1e5a9d 100%);
+        background-image: radial-gradient(center, ellipse closest-side, #3376c1 0%, #1e5a9d 100%);
+    }
+
+    /*.swiper-container {*/
+    /*height: 100%;*/
+    /*}*/
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        color: #fff;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+</style>
+<script>
+    $(document).on("pageinit", function () {
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            paginationClickable: true
+//
+//            loop: true
+//        autoplay:2000
+        });
+
+//        给滑动动画动态定义宽度, 给content定义高度
+
+        var winHeight = $(window).height();
+        $(".content").css("height", winHeight);
+        var winWidth = $(window).width();
+        $(".swiper-container").css("width", winWidth);
+        $(".swiper-container").css("height", winHeight);
+        $(".imgwidth").css("width", winWidth);
+    });
+</script>
+
+<div role="main" class="content">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide ui-blue-radius">
+                <img src="images/welcome1.png" class="imgwidth"/>
+            </div>
+            <div class="swiper-slide ui-blue-radius">
+                <img src="images/welcome2.png" class="imgwidth"/>
+            </div>
+            <div class="swiper-slide ui-blue-radius">
+                <!--<img src="images/welcome3.png" class="imgwidth"/>-->
+                <a href="#main"><img src = "images/welcome3.png" class = "imgwidth"  /> </a>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,165 @@
+<!--我的消息-->
+<style>
+.ui-page-theme-a .ui-btn.ui-btn-active{
+	border:0;
+}
+#list_nav .ui-btn-active{
+	background-color: #FFF !important;
+	color:#333!important;
+}
+.ui-page-theme-a a{
+	font-weight: 100!important;
+	
+}
+.ui-navbar li .ui-btn{
+	border:0;
+}
+.ui-btn {
+	margin:0!important;
+}
+#list_nav a{
+	line-height:41px;
+	font-size:1.1em;
+}
+#list_nav .ui-btn {
+	color:#50A625 ;
+	padding:0!important;
+}
+.nav_img{
+	float:left;
+	width:22px;
+	margin-top:10px;
+	padding-left:15%;
+}
+#list_nav span{
+	padding-right: 10px;
+}
+#list_nav li{
+	border-bottom: 1px solid #CDCDCD;
+	border-right: 1px solid #CDCDCD ;
+}
+.ui-page-theme-a .ui-btn{
+	background-color:#EDEDED ;
+}
+
+
+
+</style>
+<script>
+$(function(){
+	$(".home").attr("src", "images/home_uh.png");
+	$(".myorder").attr("src", "images/order_un.png");
+	$(".mycount").attr("src", "images/my_is.png");
+	$(".help").attr("src", "images/help_un.png");
+	$('.MS_a1').addClass('ui-btn-active');
+	var a=localStorage.getItem('OL_aid');
+	if(a!=null){
+		$(a).click();
+		localStorage.removeItem('OL_aid');
+	}
+});
+
+</script>
+
+<div id="header" data-role = "header" data-position = "fixed"data-tap-toggle="false">
+	<div class="left_icon"><a><img class="left_icon_image" src = "images/back.png"/></a></div>
+	<div class="header_input">
+		<span class="shopdt_title">我的消息</span>
+	</div>
+</div>
+
+        
+<div data-role="content" class="content">
+	<div data-role="navbar" id="list_nav">
+		<ul>
+			<li><a id="MS_a1" class="MS_a1"><div><img class="nav_img" src="images/m-0.png"/><span>未读消息</span></div></a></li>
+			<li style="border-right:0!important"><a id="MS_a2"><div><img class="nav_img" src="images/m-1-2.png"/><span>已读消息</span></div></a></li>
+		</ul>
+	</div>
+	<div id="MS_page1">
+	<ul class="yi_css">
+		<li>
+		<div class="left_css line_dashed clearfix">
+			<div style="float: left;">
+	           	<div class="left_css_up">
+	               <span>EDWF123324321431234</span>
+	           	</div>
+				<div class="left_css_down">
+	                 <span>2014-11-11</span>
+	                 <span class="comm_comcss">你有一条订单待支付</span>
+				</div>
+			</div>
+			<div class="msg_right_arr"><img src="images/Arrow-2.png"></div>
+			<div class="delete_imgcss"><img class="del" src="images/delete.png"></div>
+        </div>
+    	</li>
+    	<li>
+		<div class="left_css line_dashed clearfix">
+			<div style="float: left;">
+	           	<div class="left_css_up">
+	               <span>EDWF123324321431234</span>
+	           	</div>
+				<div class="left_css_down">
+	                 <span>2014-11-11</span>
+	                 <span class="comm_comcss">你有一条订单待支付</span>
+				</div>
+			</div>
+			<div class="msg_right_arr"><img src="images/Arrow-2.png"></div>
+			<div class="delete_imgcss"><img class="del" src="images/delete.png"></div>
+        </div>
+    	</li>
+	</ul>
+	</div>
+	<div id="MS_page2" style="display:none">
+	<ul class="yi_css">
+		<li>
+		<div class="left_css line_dashed clearfix">
+			<div style="float: left;">
+	           	<div class="left_css_up">
+	               <span>EDWF123324321431234</span>
+	           	</div>
+				<div class="left_css_down">
+	                 <span>2014-11-11</span>
+	                 <span class="comm_comcss">你有一条订单待支付</span>
+				</div>
+			</div>
+			<div class="msg_right_arr"><img src="images/Arrow-2.png"></div>
+			<div class="delete_imgcss"><img class="del" src="images/delete.png"></div>
+        </div>
+    	</li>
+    	<li>
+		<div class="left_css line_dashed clearfix">
+			<div style="float: left;">
+	           	<div class="left_css_up">
+	               <span>EDWF123324321431234</span>
+	           	</div>
+				<div class="left_css_down">
+	                 <span>2014-11-11</span>
+	                 <span class="comm_comcss">你有一条订单待支付</span>
+				</div>
+			</div>
+			<div class="msg_right_arr"><img src="images/Arrow-2.png"></div>
+			<div class="delete_imgcss"><img class="del" src="images/delete.png"></div>
+        </div>
+    	</li>
+    	<li>
+		<div class="left_css line_dashed clearfix">
+			<div style="float: left;">
+	           	<div class="left_css_up">
+	               <span>EDWF123324321431234</span>
+	           	</div>
+				<div class="left_css_down">
+	                 <span>2014-11-11</span>
+	                 <span class="comm_comcss">你有一条订单待支付</span>
+				</div>
+			</div>
+			<div class="msg_right_arr"><img src="images/Arrow-2.png"></div>
+			<div class="delete_imgcss"><img class="del" src="images/delete.png"></div>
+        </div>
+    	</li>
+	</ul>
+	</div>
+	
+
+</div>
+ <script type="text/javascript" src="js/libs/headerinput.js"></script>

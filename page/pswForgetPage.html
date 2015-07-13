@@ -1,0 +1,56 @@
+<!--修改密码-->
+<script>
+	$(function(){
+		//账号获取焦点
+		$('.username').on("focus",function(){
+			var value = $('.username').val();
+			if(value=="用户名"){
+			 $('.username').val("");
+			 $('.username').css('color','#666');
+			}
+		});
+		//账号失去焦点事件
+		$('.username').on("blur",function(){
+			var value = $('.username').val();
+			if(value==""){
+			 $('.username').val("用户名");
+			 $('.username').css('color','#999');
+			}
+		});
+		//邮箱选择事件
+		$('.psw_email').on("click",function(){
+			 $('.psw_email').css('background','#83c75d');
+			  $('.psw_email').css('color','#fff');
+			 $('.psw_phone').css('background','#E0E0E0');
+			  $('.psw_phone').css('color','#84C75E');
+		});
+		$('.psw_phone').on("click",function(){
+			 $('.psw_phone').css('background','#83c75d');
+			  $('.psw_phone').css('color','#fff');
+			 $('.psw_email').css('background','#E0E0E0');
+			 $('.psw_email').css('color','#84C75E');
+		});
+	});
+</script>
+<div id="header" data-position="fixed" data-role = "header" data-position = "fixed" style="position: fixed;"data-tap-toggle="false">
+    <div class="left_icon"><a><img class="left_icon_image" src = "images/back.png"/></a></div>
+    <div class="login_header_text">找回密码</div>
+</div>
+<div data-role = "content" class="content">
+	 <input type="hidden" value="" id="isforgetpsw">
+	 <div class ="middle">
+		<div>
+			<input data-role="none" type="text" value="用户名" name ="name" id="username" class="username login_input_style"  style="background:url('images/login1.png') no-repeat 10px center;background-color:#edebec;background-size:18px;">
+		</div>
+		<div class="ui-grid-a" style="margin-top:-2px;">
+			<div class="ui-block-a psw_text_style" style="margin-top:.5em;width:30%;color:#333">密码发送</div>
+			<div class="ui-block-b"style="width:70%;margin-top: 0.8em;">
+				<div class="psw_phone" style="color:#84C75E">手机</div><div class="psw_email" style="color:#fff">邮箱</div>
+			</div>
+		</div>
+		<div class="ui-grid-a" style="margin-top:14px;">
+		    <div class="ui-block-a"style="width:43.5%;"><div class="login_cancel"><div style="font-size: 1em;background:#e0e0e0;padding:.2em 1em;text-shadow: initial;color:#84c75e;line-height: 28px;">取消</div></div></div>
+		    <div class="ui-block-b"style="width:55%;margin-left:2%;"><div class="menu_link login_lg"><div class="button" style="background:#faae25;font-size: 1.2em;padding:.2em 1em;text-shadow: initial;color: #fff;">找回密码</div></div></div>
+		</div>
+	</div>
+</div>

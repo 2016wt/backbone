@@ -1,0 +1,127 @@
+<!--<!DOCTYPE>-->
+<!--<html>-->
+<!--<head>-->
+<!--<META http-equiv="Content-Type" content="text/html; charset=UTF-8">-->
+<!--<meta charset="UTF-8">-->
+<!--<title>projectApp</title>-->
+<!--<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" name="viewport">-->
+<!--&lt;!&ndash;old css&ndash;&gt;-->
+<!--&lt;!&ndash;<link href="css/jquery.mobile.min.css" rel="stylesheet" type="text/css"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    <link href="css/public.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="css/idangerous.swiper.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="css/idangerous.swiper.scrollbar.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="css/commodity.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="css/favorite.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="css/menu.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="css/shop.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="css/myorder.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="css/myforwardorder.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="css/checkorder.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="css/checkshop.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="css/login.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="css/iscroll.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="css/myAccount.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="css/detailsCancel.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="css/fastpay.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="css/firmOrder.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="css/checkMessage.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="css/shopdt.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="css/cancelList.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="css/appraise.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="css/myAppraise.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="css/checkAppraise.css" rel="stylesheet" type="text/css"/>&ndash;&gt;-->
+
+<!--<link href="css/jquery.mobile-1.4.5.css" rel="stylesheet" type="text/css"/>-->
+<!--&lt;!&ndash;flyco themeroller&ndash;&gt;-->
+<!--<link rel="stylesheet" type="text/css" href="../css/flycothemeroller.css">-->
+<!--&lt;!&ndash;jQuery Mobile css&ndash;&gt;-->
+
+<!--&lt;!&ndash;<link href="css/jquery.mobile.external-png-1.4.5.css" rel="stylesheet" type="text/css"/>&ndash;&gt;-->
+<!--<link href="../css/jquery.mobile.icons-1.4.5.css" rel="stylesheet" type="text/css"/>-->
+<!--&lt;!&ndash;<link href="css/jquery.mobile.inline-png-1.4.5.css" rel="stylesheet" type="text/css"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    <link href="css/jquery.mobile.inline-svg-1.4.5.css" rel="stylesheet" type="text/css"/>&ndash;&gt;-->
+<!--<link href="../css/jquery.mobile.structure-1.4.5.css" rel="stylesheet" type="text/css"/>-->
+<!--&lt;!&ndash;   <link href="css/jquery.mobile.theme-1.4.5.css" rel="stylesheet" type="text/css"/>&ndash;&gt;-->
+<!--<link href="../css/nameCard.css" rel="stylesheet" type="text/css">-->
+<!--&lt;!&ndash;jquery&ndash;&gt;-->
+<!--<script src="../js/libs/jquery-2.1.3.js"></script>-->
+<!--<script src="../js/libs/jquery.mobile-1.4.5.js"></script>-->
+<!--</head>-->
+
+<!--<body>-->
+<!--<div data-role="page">-->
+<style>
+    .ui-listview > li h2{
+        margin: 1.6em 0;
+    }
+    .bind{
+        position: absolute;
+        right: 1rem;
+        top:0;
+        height:100%;
+        line-height: 100px;
+        display: inline;
+        z-index: 2;
+    }
+    .bindLogo{
+        background: url('images/add.png') no-repeat;
+        width:38px;
+        height:38px;
+        display: inline-block;
+        margin-bottom: -14px;
+        border-radius:50% ;
+    }
+    .bindInfo{
+        padding-left:10px;
+    }
+    img{
+        margin:0.6rem 0 0 0.6rem;
+        width: 5rem;
+    }
+    .ui-listview > .ui-li-divider{
+        background: #f7f7f7;
+    }
+    li .ui-btn{
+        border-color:#cbcbcb!important;
+    }
+</style>
+<div data-role="header" data-position="fixed"> <a href="#find" data-role="button" data-icon="carat-l" data-iconpos="notext" data-theme="b"></a>
+    <h1>账号绑定</h1>
+    <a href="#scanQRcode" data-role="button" data-theme="b" data-icon="plus" data-iconpos="notext" class="ui-btn-right"></a>
+</div>
+<div data-role="content" >
+    <ul data-role="listview">
+        <li data-role="list-divider" data-theme="c"><a>当前登录账号</a></li>
+        <li><a href="#" style="height:6.3em;">
+            <img src="images/loginPage/flyco.png">
+            <h2><span style="font-weight: normal;color:#999">账号</span> <span>15895944365</span></h2>
+            </a>
+        </li>
+        <li data-role="list-divider" data-theme="c"><a>第三方账号</a></li>
+        <li>
+            <a href="#" style="height:6.3em;">
+                <img src="images/loginPage/sinaLogon.png">
+                <h2><span style="font-weight: normal;color:#999">QQ</span> <span>小丸子</span></h2>
+                <div class="bind"><span class="bindLogo"></span><span class="bindInfo">绑定</span></div>
+        </a></li>
+        <li>
+            <a href="#" style="height:6.3em;">
+                <img src="images/QQlogon.png">
+                <h2><span style="font-weight: normal;color:#999">微信</span> <span>大丸子</span></h2>
+                <div class="bind"><span class="bindLogo"></span><span class="bindInfo">绑定</span></div>
+            </a>
+        </li>
+        <li>
+            <a href="#" style="height:6.3em;">
+                <img src="images/wechatlogon.png">
+                <h2><span style="font-weight: normal;color:#999">支付宝</span> <span>中丸子</span></h2>
+                <div class="bind"><span class="bindLogo"></span><span class="bindInfo">绑定</span></div>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<!--</div>-->
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->

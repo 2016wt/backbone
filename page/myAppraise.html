@@ -1,0 +1,50 @@
+<!--我的评价-->
+
+<script>
+	$(function(){
+		$('.TAL_style_all tr:even').attr('style','background-color:#EAEAEA');
+		$('.TAL_style_all tr:odd').attr('style','background-color:white');
+	});
+</script>
+
+<div id="header" data-role = "header" data-position = "fixed"data-tap-toggle="false">
+	<div class="left_icon"><a><img class="left_icon_image" src = "images/back.png"/></a></div>
+	<div class="header_input">
+		<span class="shopdt_title">查找评价</span>
+	</div>
+</div>
+
+<div data-role="content" class="content">
+	<table class="TAL_style_all" border="1" bordercolor="#cdcdcd" cellspacing="0" cellpadding="0">
+		<thead style="color: #484848;font-size: 1.1em;">
+			<tr>
+				<td><span>订单编号</span></td>
+				<td><span>商铺</span></td>
+				<td><span>商品</span></td>
+				<td><span>金额</span></td>
+				<td><span>评价</span></td>
+			</tr>
+		</thead>
+		<tr id="tal_tr_1">
+			<td><span>O10508</span></td>
+			<td>大叔青椒商铺</td>
+			<td>非洲青椒</td>
+			<td>￥32.00</td>
+			<td>很嫩，很鲜</td>
+		</tr>
+		<tr id="tal_tr_2">
+			<td><span>O10508</span></td>
+			<td>小叔新鲜蔬菜</td>
+			<td>进口蔬菜</td>
+			<td>￥32.00</td>
+			<td>很嫩，很鲜</td>
+		</tr>
+		<tr id="tal_tr_3">
+			<td><span>O10508</span></td>
+			<td>小姨水果店</td>
+			<td>进口水果</td>
+			<td>￥32.00</td>
+			<td>很嫩，很鲜</td>
+		</tr>
+	</table>
+</div>

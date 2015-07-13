@@ -1,0 +1,109 @@
+<!--修改密码-->
+
+<script  type="text/javascript">
+	$(function(){
+		$(".home").attr("src", "images/home_uh.png");
+		$(".myorder").attr("src", "images/order_un.png");
+		$(".mycount").attr("src", "images/my_is.png");
+		$(".help").attr("src", "images/help_un.png");
+		//账号获取焦点
+		$('.username').on("focus",function(){
+			var value = $('.username').val();
+			if(value=="用户名"){
+			 $('.username').val("");
+			 $('.username').css('color','#666');
+			}
+		});
+		//账号失去焦点事件
+		$('.username').on("blur",function(){
+			var value = $('.username').val();
+			if(value==""){
+			 $('.username').val("用户名");
+			 $('.username').css('color','#999');
+			}
+		});
+		//旧密码获取焦点
+		$('.password').on("focus",function(){
+			var value = $('.password').val();
+			if(value=="旧密码"){
+			 $('.password').val("");
+			 $(this).attr('type','password'); 
+			  $('.password').css('color','#666');
+			}
+		});
+		//旧密码失去焦点
+		$('.password').on("blur",function(){
+			var value = $('.password').val();
+			if(value==""){
+			 $('.password').val("旧密码");
+			 $(this).attr('type','text'); 
+			  $('.password').css('color','#999');
+			}
+		});
+		//新密码获取焦点
+		$('.password_new').on("focus",function(){
+			var value = $('.password_new').val();
+			if(value=="新密码"){
+			 $('.password_new').val("");
+			  $('.tishi').val("");
+			 $(this).attr('type','password'); 
+			  $('.password_new').css('color','#666');
+			}
+		});
+		//新密码失去焦点
+		$('.password_new').on("blur",function(){
+			var value = $('.password_new').val();
+			if(value==""){
+			 $('.password_new').val("新密码");
+			 $(this).attr('type','text'); 
+			  $('.password_new').css('color','#999');
+			}
+		});
+		//重新密码获取焦点
+		$('.password_newd').on("focus",function(){
+			var value = $('.password_newd').val();
+			if(value=="重新输入新密码"){
+			 $('.password_newd').val("");
+			  $('.tishi').val("");
+			 $(this).attr('type','password'); 
+			   $('.password_newd').css('color','#666');
+			}
+		});
+		//重新密码失去焦点
+		$('.password_newd').on("blur",function(){
+			var value = $('.password_newd').val();
+			if(value==""){
+			 $('.password_newd').val("重新输入新密码");
+			 $(this).attr('type','text'); 
+			 $('.password_newd').css('color','#999');
+			}
+		});
+		});
+		
+</script>
+<div id="header" data-position="fixed" data-role = "header" data-position = "fixed" style="position: fixed;"data-tap-toggle="false">
+    <div class="left_icon"><a><img class="left_icon_image" src = "images/back.png"/></a></div>
+    <div class="login_header_text">修改密码</div>
+</div>
+<div data-role="content"class = "content" id = "content">
+        	
+	<div class ="middle">	
+		<div>
+			<input data-role="none" type="text" value="用户名" name ="name" id="username" class="username login_input_style"  style="background:url('images/login1.png') no-repeat 10px center;background-color:#edebec;background-size:18px;">
+		</div>
+		<div>
+			<input data-role="none" value="旧密码" class="password login_input_style" type="text" name ="password" id="password" autocomplete="off" style="background:url('images/01_72.png') no-repeat 10px center ;background-color:#edebec;background-size:18px;">
+		</div>		
+		<div>
+			<input data-role="none" value="新密码" class="password_new login_input_style" type="text" name ="password" id="password" autocomplete="off" style="background:url('images/01_74.png') no-repeat 10px center ;background-color:#edebec;background-size:18px;">
+		</div>
+		<div>
+			<input data-role="none" value="重新输入新密码" class="password_newd login_input_style" type="text" name ="password" id="password" autocomplete="off" style="background:url('images/01_76.png') no-repeat 10px center ;background-color:#edebec;background-size:18px;">
+		</div>
+		
+		<div class="ui-grid-a" style="margin-top: 4%;">
+		    <div class="ui-block-a"style="width:43.5%;"><div class="login_cancel"><div style="font-size: 1em;background:#e0e0e0;padding:.2em 1em;text-shadow: initial;color:#84c75e;line-height: 28px;">取消</div></div></div>
+		    <div class="ui-block-b"style="width:55%;margin-left:2%;"><div class="menu_link login_lg"><div class="button" style="background:#faae25;font-size: 1.2em;padding:.2em 1em;text-shadow: initial;color: #fff;">提交</div></div></div>
+		</div>
+	</div>
+</div>

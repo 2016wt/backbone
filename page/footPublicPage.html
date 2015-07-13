@@ -1,0 +1,144 @@
+<!--footer公共-->
+<style>
+.ui-btn-active{
+	background-color: #77c64a!important;
+}
+.ui-listview > li > .ui-btn:focus {
+	box-shadow:none;
+}
+.ui-page-theme-a a{
+	font-weight: 100!important;
+}
+
+#selectbtn>div,#myac_sel>div{
+	background-color:white;
+	height:39px;
+	width:140px;
+	text-align:left;
+	border-bottom: 1px solid #51a625;
+	line-height: 39px;
+	color:#77c64a;
+	opacity:0.85;
+}
+#s_choose>div{
+	color:white;
+	height:30px;
+	width:40px;
+	background-color: #99D478;
+	line-height: 30px;
+}
+
+.ui-page-theme-a{
+	text-shadow:none;
+}
+.ui-page-theme-a .ui-btn{
+	text-shadow:none!important;
+}
+
+
+</style>
+
+<div data-role="footer" data-position="fixed" class="footer" id="foot_cont" data-tap-toggle="false" style="height:4em;border-top:0;">
+<div data-role="navbar" >
+	<ul data-role="listview">
+	  <li id="to_list1" onclick="clicklist1();">
+		  <a href="#" style="background-color:#77c64a;text-align:center" class="main_page_click">
+			  <div><img  class="footer_image home" src = "images/home_is.png"id="home"/></div>
+			  <div class="footer_text_style">首页</div>
+		  </a>
+	  </li>
+	  <li id="to_list2" onclick="clickmyof();"> 
+		  <a href="#" style="background-color:#77c64a;text-align:center">
+			  <div><img class="footer_image myorder" src = "images/order_un.png" id="myorder"/></div>
+			  <div class="footer_text_style">我的订单</div>
+		  </a>
+	  </li>
+	  <li id="to_list5"  onclick="clickmyCart()">
+		  <a href="#" style="background-color:#77c64a;text-align:center">
+			  <div><img class="footer_image spc" src = "images/shoppingCart_un.png" /></div>
+			  <div class="footer_text_style">购物车</div>
+		  <div id="sc_count" style="position: absolute;top: 2px;right: 12%;color: #F00;"><%=(localStorage.getItem("sc_count")==null?"":localStorage.getItem("sc_count"))%></div>
+		  </a>
+		  
+	  </li>
+	  <li id="to_list3"  onclick="clickMyCount()">
+		  <a href="#" style="background-color:#77c64a;text-align:center">
+			  <div><img class="footer_image mycount" src = "images/my_un.png" id="mycount"/></div>
+			  <div class="footer_text_style">我的账户</div>
+		  </a>
+	  </li>
+	  <li id="to_list4"  onclick="clickHelp()">
+		  <a href="#" style="background-color:#77c64a;text-align:center">
+			  <div><img class="footer_image help" src = "images/help_un.png" id="help"/></div>
+			  <div class="footer_text_style">帮助</div>
+		  </a>
+	  </li>
+	</ul>
+</div>
+</div>
+<!-- 点击放大镜 -->
+<div style="position:fixed;top:8px;right:7px;z-index:1000;text-align:center;border:1px solid #77C54B;display:none" id="s_choose">
+	<div style="border-bottom:1px solid #77C54B;" onclick="search_goods();">商品</div>
+	<div onclick="search_shop();">商铺</div>
+</div>
+
+<!-- 我的订单下拉菜单 -->
+<div style="position:fixed;bottom:-100%;left:25%;z-index:999;display:none;" id="selectbtn"class="selectbtn" >
+	<div onclick="clickmyfavorite();" style="border-top:2px solid #51a625;"><img id="shouc" src="images/tc-1.png" class="footer_pop"><div class="footer_pop_text">我的收藏夹</div></div>
+	<div onclick="clickmyorderPage();"><img id="myorder_p" src="images/tc-3.png" class="footer_pop"><div class="footer_pop_text">我的订单</div></div>
+	<div  onclick="clicktuihPage();"><img src="images/tc-4.png" id="tuih" class="footer_pop"><div class="footer_pop_text">我的退货</div></div>
+	<div onclick="clickmyshoppingCart();"><img id="gouw" src="images/tc-2.png" class="footer_pop"><div class="footer_pop_text">我的账单</div></div>
+	<div  onclick="clickmypinjPage();" style="border-bottom:2px solid #51a625;"><img src="images/tc-5.png" id="mypinj" class="footer_pop"><div class="footer_pop_text">我的评价</div></div>
+</div>
+<div id="foot_shortbtn" style="position:fixed;bottom:47px;left:35%;display:none"><img src="images/buttom_icon.png" style="width:8px;height:10px"></div>
+<!-- 我的账户下拉菜单 -->
+<div style="position:fixed;bottom:-100%;left:50%;z-index:999;display:none;" id="myac_sel"class="myac_sel" >
+	<div onclick="clickmysetting();" style="border-top:2px solid #51a625"><img  src="images/my_install.png" class="footer_pop"><div class="footer_pop_text">我的设置</div></div>
+	<div onclick="clickmymessage();"><img  src="images/my_news.png" class="footer_pop"><div class="footer_pop_text">我的消息</div></div>
+	<div onclick="clickmyaccount();" style="border-bottom:2px solid #51a625;"><img  src="images/my_account.png" class="footer_pop"><div class="footer_pop_text">我的账户</div></div>
+</div>
+<script>
+$(function(){
+	
+	$(document).on("vmousedown","#selectbtn>div",function(){
+		$(this).css({"background-color":"#77c64a","color":"white"}).siblings().css({"background-color":"white","color":"#77c64a"});
+		var index=$(this).index();
+		if(index==0){
+			$("#shouc").attr("src", "images/shouc_is.png");
+		}else if(index==1){
+			$("#myorder_p").attr("src", "images/myorder_is.png");
+		}else if(index==2){
+			$("#tuih").attr("src", "images/tuih_is.png");
+		}else if(index==3){
+			$("#gouw").attr("src", "images/gouw_is.png");
+		}else if(index==4){
+			$("#mypinj").attr("src", "images/mypinj_is.png");
+		}
+		$(".home").attr("src", "images/home_uh.png");
+		$(".myorder").attr("src", "images/order_is.png");
+		$(".mycount").attr("src", "images/my_un.png");
+		$(".help").attr("src", "images/help_un.png");
+		$(".spc").attr("src","images/shoppingCart_un.png");
+	});
+	
+	$(document).on("vmousedown","#myac_sel>div",function(){
+		$(this).css({"background-color":"#77c64a","color":"white"}).siblings().css({"background-color":"white","color":"#77c64a"});
+		var index=$(this).index();
+		if(index==0){
+			$(this).find("img").attr("src", "images/my_install_is.png");
+		}else if(index==1){
+			$(this).find("img").attr("src", "images/my_news_is.png");
+		}else if(index==2){
+			$(this).find("img").attr("src", "images/my_account_is.png");
+		}
+		
+		$(".home").attr("src", "images/home_uh.png");
+		$(".myorder").attr("src", "images/order_un.png");
+		$(".mycount").attr("src", "images/my_is.png");
+		$(".help").attr("src", "images/help_un.png");
+		$(".spc").attr("src","images/shoppingCart_un.png");
+	});
+});
+
+</script>
+

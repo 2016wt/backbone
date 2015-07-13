@@ -1,0 +1,144 @@
+<!--<!DOCTYPE>-->
+<!--<html>-->
+<!--<head>-->
+<!--<META http-equiv="Content-Type" content="text/html; charset=UTF-8">-->
+<!--<meta charset="UTF-8">-->
+<!--<title>projectApp</title>-->
+<!--<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" name="viewport">-->
+<!--&lt;!&ndash;&lt;!&ndash;old css&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;<link href="css/jquery.mobile.min.css" rel="stylesheet" type="text/css"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    <link href="css/public.css" rel="stylesheet" type="text/css"/>-->
+        <!--<link href="css/idangerous.swiper.css" rel="stylesheet" type="text/css"/>-->
+        <!--<link href="css/idangerous.swiper.scrollbar.css" rel="stylesheet" type="text/css"/>-->
+        <!--<link href="css/commodity.css" rel="stylesheet" type="text/css"/>-->
+        <!--<link href="css/favorite.css" rel="stylesheet" type="text/css"/>-->
+        <!--<link href="css/menu.css" rel="stylesheet" type="text/css"/>-->
+        <!--<link href="css/shop.css" rel="stylesheet" type="text/css"/>-->
+        <!--<link href="css/myorder.css" rel="stylesheet" type="text/css"/>-->
+        <!--<link href="css/myforwardorder.css" rel="stylesheet" type="text/css"/>-->
+        <!--<link href="css/checkorder.css" rel="stylesheet" type="text/css"/>-->
+        <!--<link href="css/checkshop.css" rel="stylesheet" type="text/css"/>-->
+        <!--<link href="css/login.css" rel="stylesheet" type="text/css"/>-->
+        <!--<link href="css/iscroll.css" rel="stylesheet" type="text/css"/>-->
+        <!--<link href="css/myAccount.css" rel="stylesheet" type="text/css"/>-->
+        <!--<link href="css/detailsCancel.css" rel="stylesheet" type="text/css"/>-->
+        <!--<link href="css/fastpay.css" rel="stylesheet" type="text/css"/>-->
+        <!--<link href="css/firmOrder.css" rel="stylesheet" type="text/css"/>-->
+        <!--<link href="css/checkMessage.css" rel="stylesheet" type="text/css"/>-->
+        <!--<link href="css/shopdt.css" rel="stylesheet" type="text/css"/>-->
+        <!--<link href="css/cancelList.css" rel="stylesheet" type="text/css"/>-->
+        <!--<link href="css/appraise.css" rel="stylesheet" type="text/css"/>-->
+        <!--<link href="css/myAppraise.css" rel="stylesheet" type="text/css"/>-->
+        <!--<link href="css/checkAppraise.css" rel="stylesheet" type="text/css"/>&ndash;&gt;-->
+
+<!--<link href="css/jquery.mobile-1.4.5.css" rel="stylesheet" type="text/css"/>-->
+<!--&lt;!&ndash;flyco themeroller&ndash;&gt;-->
+<!--<link rel="stylesheet" type="text/css" href="../css/flycothemeroller.css">-->
+<!--&lt;!&ndash;jQuery Mobile css&ndash;&gt;-->
+
+<!--&lt;!&ndash;<link href="css/jquery.mobile.external-png-1.4.5.css" rel="stylesheet" type="text/css"/>&ndash;&gt;-->
+<!--<link href="../css/jquery.mobile.icons-1.4.5.css" rel="stylesheet" type="text/css"/>-->
+<!--&lt;!&ndash;<link href="css/jquery.mobile.inline-png-1.4.5.css" rel="stylesheet" type="text/css"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    <link href="css/jquery.mobile.inline-svg-1.4.5.css" rel="stylesheet" type="text/css"/>&ndash;&gt;-->
+<!--<link href="../css/jquery.mobile.structure-1.4.5.css" rel="stylesheet" type="text/css"/>-->
+<!--&lt;!&ndash;   <link href="css/jquery.mobile.theme-1.4.5.css" rel="stylesheet" type="text/css"/>&ndash;&gt;-->
+<!--<link rel="stylesheet" type="text/css" href="../css/spotsNearby.css">-->
+<!--&lt;!&ndash;jquery&ndash;&gt;-->
+<!--<script src="../js/libs/jquery-2.1.3.js"></script>-->
+<!--<script src="../js/libs/jquery.mobile-1.4.5.js"></script>-->
+<!--</head>-->
+
+<!--<body>-->
+<!--<div data-role="page">-->
+<style type="text/css">
+    body, html,#allmap {;height: 8em;overflow: hidden;margin:0;}
+</style>
+
+<script type="text/javascript">
+
+
+    // 百度地图API功能
+    //GPS坐标
+    var xx = window.localStorage.getItem("longitude");
+    alert(xx);
+    var yy =  window.localStorage.getItem("latitude");
+    var gpsPoint = new BMap.Point(xx,yy);
+
+   //   var xx = 116.397428;
+  //  var yy = 39.90923;
+  //  var gpsPoint = new BMap.Point(xx,yy);
+    var address;
+
+
+    //地图初始化
+    var bm = new BMap.Map("allmap");
+    bm.centerAndZoom(gpsPoint, 13);
+    bm.addControl(new BMap.NavigationControl());
+
+    //添加谷歌marker和label
+    //var markergps = new BMap.Marker(gpsPoint);
+    //bm.addOverlay(markergps); //添加GPS标注
+    //var labelgps = new BMap.Label("",{offset:new BMap.Size(-60,-10),position:gpsPoint});
+    //labelgps.setStyle({background:"url(image/2.png)"});
+    //markergps.setLabel(labelgps); //添加GPS标注
+
+
+    //坐标转换完之后的回调函数
+    translateCallback = function (point){
+        var marker = new BMap.Marker(point);
+        bm.addOverlay(marker);
+        var label = new BMap.Label("当前位置",{offset:new BMap.Size(-60,-60)});
+        marker.setLabel(label); //添加百度label
+        bm.setCenter(point);
+        var gc = new BMap.Geocoder();
+        gc.getLocation(point, function(rs){
+            var addComp = rs.addressComponents;
+            address = addComp.province+addComp.city+addComp.district+addComp.street;
+            $('#address').text(address);
+//            alert(addComp.province + ", " + addComp.city + ", " + addComp.district + ", " + addComp.street);
+        });
+    }
+
+
+        BMap.Convertor.translate(gpsPoint,0,translateCallback);     //真实经纬度转成百度坐标
+
+</script>
+  <div data-role="header" data-position="fixed" class="to_miscellaneousPage">
+      <a href="#" data-role="button" data-icon="carat-l" data-iconpos="notext" data-theme="b"></a>
+    <h1>服务网点</h1>
+  </div>
+  <div data-role="content" >
+    <div  id="allmap" >
+      <!--<h2>我定位到的地址</h2>-->
+      <!--<a href="#" >-->
+      <!--<p align="right"> 定位地址不对？</p>-->
+      <!--</a>-->
+    </div>
+      <div  align="center" data-theme="b" >
+          <h2 id="address" ></h2>
+
+      </div>
+      <div align="right" style="margin:1.5rem 0;font-size: .75rem;">
+        <span ><a style="cursor: pointer;">定位地址不对？</a></span>
+
+      </div>
+    <div>
+      <ul data-role="listview" data-theme="c">
+        <li> <a href="#">
+          <h1>飞科上海市长宁区维修网点</h1>
+          <p><span>上海市长宁区某区某路某号</span>维修网点</p>
+          <p class="ui-li-aside">325m</p>
+          <p>021-87563240</p>
+          </a> </li>
+        <li> <a href="#">
+          <h1>飞科上海市虹口区维修网</h1>
+          <p><span>上海市虹口区某路某号</span>维修网点</p>
+          <p>021-87654321</p>
+          <p class="ui-li-aside">1100m</p>
+          </a> </li>
+      </ul>
+    </div>
+  </div>
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->

@@ -1,0 +1,78 @@
+<!--<!DOCTYPE>-->
+<!--<html>-->
+<!--<head>-->
+    <!--<META http-equiv="Content-Type" content="text/html; charset=UTF-8">-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>projectApp</title>-->
+    <!--<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"-->
+          <!--name="viewport">-->
+    <!--<link rel="stylesheet" type="text/css" href="../css/flycothemeroller.css">-->
+    <!--<link href="../css/jquery.mobile.icons-1.4.5.css" rel="stylesheet" type="text/css"/>-->
+    <!--<link href="../css/jquery.mobile.structure-1.4.5.css" rel="stylesheet" type="text/css"/>-->
+    <!--<link href="../css/loading.css" rel="stylesheet" type="text/css">-->
+    <!--<script src="../js/libs/jquery-2.1.3.js"></script>-->
+    <!--<script src="../js/libs/jquery.mobile-1.4.5.js"></script>-->
+    <style>
+        .ui-content {
+            /*display: -webkit-box;*/
+            /*display: -ms-flexbox;*/
+            /*display: -webkit-flex;*/
+            /*display: flex;*/
+            /*-webkit-box-pack: center;*/
+            /*-ms-flex-pack: center;*/
+            /*-webkit-justify-content: center;*/
+            /*justify-content: center;*/
+            /*-webkit-box-align: center;*/
+            /*-ms-flex-align: center;*/
+            /*-webkit-align-items: center;*/
+            /*align-items: center;*/
+        }
+
+        .ui-field-contain {
+            padding-top: 6rem;
+            padding-right: 4rem;
+            padding-left: 4rem;
+        }
+
+        .ui-page-theme-a .ui-listview .ui-btn {
+
+            border-color: #cccccc;
+            color: #808080;
+            font-weight: normal;
+        }
+
+        /*.webcam {*/
+            /*height: 10rem;*/
+            /*width: 10rem;*/
+            /*text-align: center;*/
+            /*padding-top: 2em;*/
+        /*}*/
+
+        #qrcanvas {
+            height:8rem;
+            width:8rem;
+            margin-bottom:3rem;
+            border: solid 1px #000000;
+        }
+
+        li .ui-btn {
+            background-color: #ffffff;
+        }
+
+    </style>
+<!--</head>-->
+<!--<body>-->
+<!--<div data-role="page">-->
+    <div data-role="header" data-position="fixed">
+        <a href="#find" data-role="button" data-icon="carat-l" data-iconpos="notext" data-theme="b"></a>
+        <h1>扫一扫</h1>
+    </div>
+    <div role="main" class="ui-content">
+        <div class="ui-field-contain" align="center">
+            <canvas id="qrcanvas"></canvas>
+            <a href="#wifiCon" data-role="button" data-theme="b">从相册中选择照片</a>
+        </div>
+    </div>
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->

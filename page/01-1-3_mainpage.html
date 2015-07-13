@@ -1,0 +1,121 @@
+<!--<!DOCTYPE>-->
+<!--<html>-->
+<!--<head>-->
+<!--<META http-equiv="Content-Type" content="text/html; charset=UTF-8">-->
+<!--<meta charset="UTF-8">-->
+<!--<title>projectApp</title>-->
+<!--<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" name="viewport">-->
+<!--<link rel="stylesheet" type="text/css" href="../css/flycothemeroller.css">-->
+<!--<link href="../css/jquery.mobile.icons-1.4.5.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="../css/jquery.mobile.structure-1.4.5.css" rel="stylesheet" type="text/css"/>-->
+<!--<link rel="stylesheet" type="text/css" href="../css/public.css">-->
+<!--<link href="../css/mainPage.css" rel="stylesheet" type="text/css">-->
+<!--<script src="/js/libs/jquery-2.1.3.js"></script>-->
+<!--<script src="../js/libs/jquery.mobile-1.4.5.js"></script>-->
+<!--</head>-->
+<style>
+    img {
+        height: 100%;
+
+    }
+
+    .ui-listview > .ui-li-has-thumb > .ui-btn > img, .ui-listview > .ui-li-static.ui-li-has-thumb {
+        border-right: #ebebeb solid 1px;
+    }
+
+    h2 {
+        color: #000000;
+        padding-left: 15%;
+    }
+
+    p {
+        color: #8d8d8d;
+        padding-left: 15%;
+    }
+
+    .demolist {
+        padding-top: 6%;
+        padding-bottom: 8%;
+        
+    }
+
+    .ui-listview > li > a.ui-btn {
+        border: none;
+    }
+
+    .demodevice {
+        margin-top: 5%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .content{
+        height:100%;
+    }
+
+
+    /*使用伪元素制作导航列表项分隔线*/
+    /*.demodevice:after{*/
+        /*content:"";*/
+        /*color:#666;*/
+        /*position:absolute;*/
+        /*top:18px;*/
+        /*height:20px;*/
+        /*left:-1px;*/
+        /*width:10px;*/
+        /*background-image:linear-gradient(to bottom,#f65f57,#993333,#f65f57);*/
+    /*}*/
+
+</style>
+<script>
+    $(document).ready(function(){
+        $("#addDevice").on("tap",function(e){
+            $("#popupTest").popup("open");
+            return false;
+            /*alert($("#popupTest-popup").style);
+             $("#popupTest-popup").style("max-width :1570px; top: 50px;right: 10px;");*/
+        });
+    });
+</script>
+<!--<body>-->
+<!--<div data-role="page">-->
+<div data-role="header" data-position="fixed" class="header">
+    <h1>首页</h1>
+    <a href="#" data-theme="b" data-role="button" data-icon="plus"  data-iconpos="notext" class="ui-btn-right" id="addDevice"></a>
+    <div data-role="popup" id="popupTest" style="position: fixed; top: 50px; right:10px">
+        <ul data-role="listview">
+  			<li><a href="#">手动添加</a></li>
+  			<li><a href="#scanQRcode">扫一扫</a></li>
+			<li><a href="#">搜索</a></li>
+		</ul>
+    </div>
+</div>
+<div role="main" class="main">
+    <div class="ui-grid-solo">
+        <div class="ui-block-a">
+            <ul data-role="listview" class="ui-alt-icon">
+                <li class=""><a href="#" class="demolist"> <img src="images/demodevice.png" class="demodevice">
+                    <h2>试用体验设备</h2>
+                    <p>进行虚拟设备操作体验</p>
+                </a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="ui-grid-solo adswiper content">
+        <div class="ui-block-a" style="text-align:center"><a href="#"><img src="images/bigad.png"></a></div>
+    </div>
+</div>
+<!--<div id="PublicFooter" data-role="footer" data-theme="b" data-position="fixed">-->
+<!--<div data-role="navbar">-->
+<!--<ul>-->
+<!--<li><a href="#" class="ui-btn ui-btn-icon-top ui-icon-shop">商城</a></li>-->
+<!--<li><a href="#myDevice" class="ui-btn ui-btn-icon-top ui-icon-device">设备</a></li>-->
+<!--<li><a href="#find" class="ui-btn ui-btn-icon-top ui-icon-find">发现</a></li>-->
+<!--<li><a href="#my" class="ui-btn ui-btn-icon-top ui-icon-user">我的</a></li>-->
+<!--<li><a href="#" class="ui-btn ui-btn-icon-top ui-icon-heart">健康</a></li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->

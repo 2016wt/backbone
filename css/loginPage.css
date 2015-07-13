@@ -1,0 +1,117 @@
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+.middle{
+	margin-top:12%;
+	font-size:1.4em;
+	margin-left: 1em;
+	margin-right: 1em;
+}
+.middle>div{
+	margin-top: 3%;
+}
+.login_header_text{
+	text-align: center;
+	font-size:1em;
+	text-shadow: initial;
+	color: #fff;
+	margin-top: -1.4em;
+	font-weight: 100;
+}
+.login_icon{
+    margin-bottom: 2em;
+    margin-left: 25%;
+}
+.login_forget{
+	margin-top:5%;
+	font-size: 0.8em;
+	padding-left:1em;
+}
+.login_lg{
+	text-align:center;
+}
+.login_cancel{
+	text-align:center;
+}
+.psw_content_size{
+	font-size:1.4em;
+	padding-top: 30%;
+}
+.psw_text_style{
+	padding-top: .7em;
+
+}
+.psw_button_style{
+	margin-left: 2em;
+	margin-right: 2em;
+	margin-top: 3em;
+}
+
+.psw_button_style_in{
+	background:#83C75D;
+}
+.psw_button_style_to{
+	background:#999;
+}
+.psw_input_style{
+	padding-right: 2em;
+
+}
+.psw_header_text{
+    text-align: center;
+    text-shadow: initial;
+    margin-top: 0.5em;
+    color: white;
+}
+.login_input_style{
+	padding-left: 2.3em;
+	color: #999;
+	border: 0px none;
+	width: 100%;
+	padding-top:.4em;
+	padding-bottom:.4em;
+}
+
+.login_img_psw{
+	float:right;
+	width: 20px;
+	margin-right: 0.5em;
+}
+.login_img_left{
+	float:right;
+	text-shadow: initial;
+	color:#999;
+}
+.psw_input{
+	background-color:#edebec;
+	background-size:24px;
+	border: 0px none;
+	line-height: 30px;
+	margin-top: 0.3em;
+	padding-left:1em;
+}
+.psw_email{
+	float: right;
+    width: 50%;
+    background: none repeat scroll 0% 0% #83c75d;
+    line-height: 2em;
+    text-align: center;
+}
+
+.psw_phone{
+	float: right;
+	width: 50%;
+	background: none repeat scroll 0% 0% #E0E0E0;
+	line-height: 2em;
+	text-align: center;
+}*/

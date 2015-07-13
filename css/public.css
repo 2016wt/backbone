@@ -1,0 +1,250 @@
+/* BIG HEADER */
+
+/*.ui-header .ui-title,*/
+/*.ui-footer .ui-title {*/
+    /*min-height: 2em;*/
+/*}*/
+
+/*.ui-btn-icon-notext{*/
+    /*height:3em;*/
+    /*width:3em;*/
+/*}*/
+
+/*.ui-btn-icon-notext:after {*/
+    /*margin-left: -22px;*/
+    /*margin-top:-20px;*/
+/*}*/
+
+/*.ui-btn-icon-notext:after {*/
+
+    /*width: 32px;*/
+    /*height: 32px;*/
+/*}*/
+/*.ui-icon-plus:after {*/
+    /*background-images: url("../images/icons-svg/plus-white.svg");*/
+
+/*}*/
+
+/* Fallback */
+/*.ui-nosvg .ui-icon-plus:after {*/
+    /*background-images: url("../images/icons-png/plus-white.png");*/
+/*}*/
+
+
+
+
+
+.ui-icon-shop:after {
+    background-image: url("../images/icons-svg/shop-blue.svg");
+}
+
+/* Fallback */
+.ui-nosvg .ui-icon-shop:after {
+    background-image: url("../images/icons-png/shop-blue.png");
+}
+
+.ui-icon-device:after {
+    background-image: url("../images/icons-svg/dial-blue.svg");
+}
+
+/* Fallback */
+.ui-nosvg .ui-icon-device:after {
+    background-image: url("../images/icons-png/dial-blue.png");
+}
+
+.ui-icon-find:after {
+    background-image: url("../images/icons-svg/find-blue.svg");
+}
+
+/* Fallback */
+.ui-nosvg .ui-icon-find:after {
+    background-image: url("../images/icons-png/find-blue.png");
+}
+
+.ui-icon-user:after {
+    background-image: url("../images/icons-svg/user-blue.svg");
+}
+
+/* Fallback */
+.ui-nosvg .ui-icon-user:after {
+    background-image: url("../images/icons-png/user-blue.png");
+}
+
+.ui-icon-heart:after {
+    background-image: url("../images/icons-svg/heart-blue.svg");
+}
+
+/* Fallback */
+.ui-nosvg .ui-icon-heart:after {
+    background-image: url("../images/icons-png/heart-blue.png");
+}
+
+/*logon page button*/
+
+.ui-icon-jd:after {
+    /*background-image: url("../images/icons-svg/jd.svg");*/
+/*}*/
+
+/* Fallback */
+/*.ui-nosvg .ui-icon-shop:after {*/
+    background-image: url("../images/icons-png/jd.png");
+}
+
+
+.ui-icon-wechat:after {
+    /*background-image: url("../images/icons-svg/wechat.svg");*/
+/*}*/
+
+/* Fallback */
+/*.ui-nosvg .ui-icon-shop:after {*/
+    background-image: url("../images/icons-png/wechat.png");
+}
+
+.ui-icon-alipay:after {
+    /*background-image: url("../images/icons-svg/alipay.svg");*/
+/*}*/
+
+/* Fallback */
+/*.ui-nosvg .ui-icon-shop:after {*/
+    background-image: url("../images/icons-png/alipay.png");
+}
+
+.ui-icon-qq:after {
+    /*background-image: url("../images/icons-svg/qq.svg");*/
+/*}*/
+
+/* Fallback */
+/*.ui-nosvg .ui-icon-shop:after {*/
+    background-image: url("../images/icons-png/qq.png");
+}
+
+
+
+
+
+
+
+
+
+
+
+.ui-blue-radius {
+    background-image: -webkit-radial-gradient(center, ellipse closest-side, #3376c1 0%, #1e5a9d 100%);
+    background-image: -moz-radial-gradient(center, ellipse closest-side, #3376c1 0%, #1e5a9d 100%);
+    background-image: -o-radial-gradient(center, ellipse closest-side, #3376c1 0%, #1e5a9d 100%);
+    background-image: radial-gradient(center, ellipse closest-side, #3376c1 0%, #1e5a9d 100%);
+
+}
+
+.logo {
+    position: fixed;
+    top: 39%;
+    left: 10%;
+    right: 10%;
+    text-align: center;
+
+}
+
+.copyright {
+    position: fixed;
+    bottom: 1%;
+    left: 20%;
+    right: 20%;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+
+
+/*old style*/
+/*.menu_image_style{
+	width:30%;
+	margin-left:2%;
+	background-color:green;
+	height:6em;
+}
+.content{
+	margin:0;
+	padding:0;
+	border:0;
+	font-weight: 100;
+	margin-top: 0px;
+	overflow-x: visible;
+}
+.left_icon_image{
+	width:1.5em;
+	height:1.5em;
+}
+.right_icon{
+	float:right;
+	margin-right:1em;
+	margin-top:-2em;
+}
+.right_icon_image{
+	width:1.5em;
+	height:1.5em;
+	margin-top: 0.3em;
+}
+.left_icon_image{
+	width:1.5em;
+	height:1.5em;
+
+}
+.left_icon{
+	padding-left:8px;
+	padding-top:.5em;
+	width: 2em;
+}
+.header_input{
+	width:90%; 
+	margin:auto;
+	margin-top: -2.1em;
+	text-align:center;
+	font-family: sans-serif;
+	font-size:.8em;
+}
+.ui-page { -webkit-backface-visibility: hidden; }
+
+.footer_image{
+	width: 28px;
+	margin-top: -0.3em;
+}
+.footer_text_style{
+	color:#ffffff;
+	text-shadow: initial;
+	font-size: .9em;
+}
+.footer_pop{
+	width: 21px;
+height: 21px;
+float: left;
+margin-top: 0.8em;
+margin-left: 1em;
+}
+.footer_pop_text{
+	font-size:1em;
+	padding-left:4.6em;
+}
+
+.search_hide{
+	background:#50a625;
+	color:#fff;
+	text-align:center;
+	text-shadow: initial;
+	border: 1px solid #50a625;
+	font-family: sans-serif !important;
+	margin-top: 3px;
+	margin-right: 30px;
+	font-weight: 100;
+	width: 68%;
+	height: 30px;
+}
+.ui-shadow{
+	box-shadow: none!important;
+}
+.input_detail{
+	border: 0px none; 
+	background-color:#edecec; 
+	width: 18px;
+	padding-left: 0.25em;
+}*/

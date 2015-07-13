@@ -1,0 +1,95 @@
+<!--<!DOCTYPE>-->
+<!--<html>-->
+<!--<head>-->
+<!--<META http-equiv="Content-Type" content="text/html; charset=UTF-8">-->
+<!--<meta charset="UTF-8">-->
+<!--<title>projectApp</title>-->
+<!--<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" name="viewport">-->
+<!--old css-->
+<!--<link href="css/jquery.mobile.min.css" rel="stylesheet" type="text/css"/>-->
+<!--    <link href="css/public.css" rel="stylesheet" type="text/css"/>
+        <link href="css/idangerous.swiper.css" rel="stylesheet" type="text/css"/>
+        <link href="css/idangerous.swiper.scrollbar.css" rel="stylesheet" type="text/css"/>
+        <link href="css/commodity.css" rel="stylesheet" type="text/css"/>
+        <link href="css/favorite.css" rel="stylesheet" type="text/css"/>
+        <link href="css/menu.css" rel="stylesheet" type="text/css"/>
+        <link href="css/shop.css" rel="stylesheet" type="text/css"/>
+        <link href="css/myorder.css" rel="stylesheet" type="text/css"/>
+        <link href="css/myforwardorder.css" rel="stylesheet" type="text/css"/>
+        <link href="css/checkorder.css" rel="stylesheet" type="text/css"/>
+        <link href="css/checkshop.css" rel="stylesheet" type="text/css"/>
+        <link href="css/login.css" rel="stylesheet" type="text/css"/>
+        <link href="css/iscroll.css" rel="stylesheet" type="text/css"/>
+        <link href="css/myAccount.css" rel="stylesheet" type="text/css"/>
+        <link href="css/detailsCancel.css" rel="stylesheet" type="text/css"/>
+        <link href="css/fastpay.css" rel="stylesheet" type="text/css"/>
+        <link href="css/firmOrder.css" rel="stylesheet" type="text/css"/>
+        <link href="css/checkMessage.css" rel="stylesheet" type="text/css"/>
+        <link href="css/shopdt.css" rel="stylesheet" type="text/css"/>
+        <link href="css/cancelList.css" rel="stylesheet" type="text/css"/>
+        <link href="css/appraise.css" rel="stylesheet" type="text/css"/>
+        <link href="css/myAppraise.css" rel="stylesheet" type="text/css"/>
+        <link href="css/checkAppraise.css" rel="stylesheet" type="text/css"/>-->
+
+<!--<link href="css/jquery.mobile-1.4.5.css" rel="stylesheet" type="text/css"/>-->
+<!--flyco themeroller-->
+<!--<link rel="stylesheet" type="text/css" href="../css/flycothemeroller.css">-->
+<!--jQuery Mobile css-->
+
+<!--<link href="css/jquery.mobile.external-png-1.4.5.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="../css/jquery.mobile.icons-1.4.5.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="css/jquery.mobile.inline-png-1.4.5.css" rel="stylesheet" type="text/css"/>-->
+<!--    <link href="css/jquery.mobile.inline-svg-1.4.5.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="../css/jquery.mobile.structure-1.4.5.css" rel="stylesheet" type="text/css"/>-->
+<!--   <link href="css/jquery.mobile.theme-1.4.5.css" rel="stylesheet" type="text/css"/>-->
+<!--<link rel="stylesheet" type="text/css" href="../css/register.css">-->
+<!--jquery-->
+<!--<script src="../js/libs/jquery-2.1.3.js"></script>-->
+<!--<script src="../js/libs/jquery.mobile-1.4.5.js"></script>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div data-role="page" id="pagelogon">-->
+<style>
+    .ui-field-contain {
+        padding-top: 6rem;
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+
+    #vericode{
+        padding-top: .22em;
+        padding-bottom: .23em;
+        padding-right: 1em;
+
+    }
+
+
+</style>
+
+
+<div data-role="header" data-position="fixed"><a href="#login" data-role="button" data-icon="carat-l"
+                                                data-iconpos="notext" data-theme="b"></a>
+
+    <h1>注册</h1>
+</div>
+<div data-role="content">
+    <div class="ui-field-contain">
+        <input type="text" name="account" id="account" required="required" maxlength="11"
+               pattern="^1[3|4|5|8][0-9]\d{4,8}$" title="请输入正确的手机号" placeholder="请输入手机号码">
+        <div class="ui-grid-a">
+            <div class="ui-block-a">
+                <input type="text" name="vericode" id="vericode" required="required" placeholder="请输入验证码">
+            </div>
+            <div class="ui-block-b">
+                <input type="button" value="发送验证码" id="sendCode" class="sendCode ui-btn-right" data-theme="b">
+            </div>
+        </div>
+        <input type="password" name="password" id="password" required="required" maxlength="16"
+               pattern="^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,16}$" title="密码必须为8-16位字母和数字的组合" placeholder="请输入密码">
+        <input type="password" name="passwordconfirm" id="passwordconfirm" required="required" maxlength="16"
+               pattern="^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,16}$" title="密码必须为8-16位字母和数字的组合" placeholder="请再次输入密码">
+        <input type="button" class="userRegist" value="注册" data-theme="b">
+    </div>
+</div>
+<!--</body>-->
+<!--</html>-->

@@ -1,0 +1,56 @@
+<!-- 商铺详情 -->
+<script>
+	$(function(){
+		if(localStorage.getItem("shop_type")==1){
+			$("#tb_gr").show();
+		}else if(localStorage.getItem("shop_type")==2){
+			$("#tb_qy").show();
+		}else{
+			$("#tb_gr").show();
+		}
+		$(".home").attr("src", "images/home_uh.png");
+		$(".myorder").attr("src", "images/order_un.png");
+		$(".mycount").attr("src", "images/my_is.png");
+		$(".help").attr("src", "images/help_un.png");
+	});
+</script>
+
+<!-- 加载头部样式 -->
+<div id="header" data-role = "header" data-position = "fixed" data-tap-toggle="false">
+	<div class="left_icon"><a><img class="left_icon_image" src = "images/back.png"/></a></div>
+	<div class="header_input">
+		<span class="shopdt_title">商铺信息</span>
+	</div>
+</div>
+		
+<div data-role="content" class="content">
+	<table id="tb_gr" class="shopdt_tb" style="display:none;" cellspacing="0" cellpadding="0">
+
+		<tr><td>商铺类型</td><td><%=data.shopNo%></td></tr>
+		<tr><td>商铺名称</td><td><%=data.shopName%></td></tr>
+		<tr><td>商铺地址</td><td><%=data.shopAddress%></td></tr>
+
+		<tr><td>商铺电话</td><td>12348888</td></tr>
+		<tr><td>商铺代表人姓名</td><td>大叔</td></tr>
+		<tr><td>商铺代表人住址</td><td>辽宁省大连市毛线沟县毛线沟乡毛线沟镇88号</td></tr>
+		<tr><td>商铺代表人手机号</td><td>12348888</td></tr>
+		<tr><td>商铺联系人姓名</td><td>张三</td></tr>
+		<tr><td>商铺联系人手机号</td><td>12345678</td></tr>
+	</table>
+	<table id="tb_qy" class="shopdt_tb" style="display:none;" cellspacing="0" cellpadding="0">
+		<tr><td>商铺类型</td><td>企业</td></tr>
+		<tr><td>商铺名称</td><td>大叔青椒商铺</td></tr>
+		<tr><td>商铺地址</td><td>辽宁省大连市毛线沟县毛线沟乡毛线沟镇88号</td></tr>
+		<tr><td>商铺电话</td><td>12348888</td></tr>
+		<tr><td>商铺代表人姓名</td><td>大叔</td></tr>
+		<tr><td>商铺代表人手机号</td><td>12348888</td></tr>
+		<tr><td>商铺联系人姓名</td><td>张三</td></tr>
+		<tr><td>商铺联系人手机号</td><td>12345678</td></tr>
+		<tr><td>企业名称</td><td>大叔青椒连锁公司</td></tr>
+		<tr><td>企业法人代表</td><td>大叔</td></tr>
+		<tr><td>企业地址</td><td>辽宁省大连市毛线沟县毛线沟乡毛线沟镇88号</td></tr>
+		<tr><td>企业电话</td><td>12348888</td></tr>
+		<tr><td>企业工商注册号</td><td>100000400009388</td></tr>
+	</table>
+</div>
+ <script type="text/javascript" src="js/libs/headerinput.js"></script>

@@ -1,0 +1,55 @@
+<!--修改密码-->
+<script>
+	$(function(){
+	
+	});
+</script>
+<style>
+.check_Mge tr td:nth-child(odd)>span{
+  float: right;
+  margin-right:10px;
+   color:#787878;
+}  
+.check_Mge tr:nth-child(even){
+background-color:#eaeaea;
+}
+.check_Mge tr td:nth-child(even)>span{
+  float: left;
+  margin-left: 10px;
+   color:#787878;
+}
+.check_Mge tr td:nth-child(odd){
+  width: 30%;
+  
+}
+.main_version{
+  margin-top: 15px;
+}
+.check_Mge td{
+	border-bottom: 1px solid #CDCDCD;
+	border-right: 1px solid #CDCDCD;
+	height:38px;
+}
+</style>
+<div id="header" data-position="fixed" data-role = "header" data-position = "fixed" style="position: fixed;"data-tap-toggle="false">
+    <div class="left_icon"><a><img class="left_icon_image" src = "images/back.png"/></a></div>
+    <div class="login_header_text">我的版本</div>
+</div>
+<div data-role = "content" class="content">
+	<div class="main_version">
+	     <table class="check_Mge" style="width:100%;body:1px;" cellspacing="0">  
+			<tbody>
+			<tr >
+			
+			<td style="border-top: 1px solid #CDCDCD;height:39px;"><span>版&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本</span></td>
+			<td style="border-top: 1px solid #CDCDCD;height:39px;"><span><%=version%></span></td>	
+		</tr>
+		<tr>
+			
+			<td><span>更新时间</span></td>
+			<td><span>2014-1-1</span></td>
+			
+		</tr>
+
+	</tbody></table></div>
+</div>

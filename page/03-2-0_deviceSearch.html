@@ -1,0 +1,43 @@
+<style>
+    li{
+        border-color:#ccc !important;
+    }
+    .ui-page-theme-a .ui-btn{
+        border-color: #ccc;
+        color:#1f1f1f;
+    }
+    .ui-icon-carat-r:after {
+        background-image: url("images/icons-svg/find.svg");
+    }
+    .listview li a{
+        color:#fff!important;
+    }
+    .ui-input-text{
+        position: relative;
+    }
+    .ui-input-text::after{
+        content: "";
+        position:absolute;
+        top:0;
+        right:0;
+        height:100%;
+        width:3rem;
+        background: url("images/search1.png");
+        background-size:100% ;
+        cursor: pointer;
+    }
+</style>
+<div data-role="header" data-position="fixed">
+    <a data-role="button" data-icon="carat-l" data-theme="b" data-iconpos="notext"></a>
+    <h2>添加关注</h2>
+    <a data-role="button" data-icon="plus" data-iconpos="notext" class="ui-btn-right" data-theme="b"></a>
+</div>
+<div data-role="content" >
+    <ul data-role="listview" style="padding-left:1rem;padding-right: 1rem;">
+        <li>
+            <input type="text"  name="text" id="text" value="value">
+        </li>
+        <li><a>附近设备</a></li>
+        <li><a>关注度排行</a></li>
+    </ul>
+</div>

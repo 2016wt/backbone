@@ -1,0 +1,106 @@
+
+
+<script>
+	$(function(){
+		$(".home").attr("src", "images/home_uh.png");
+		$(".myorder").attr("src", "images/order_is.png");
+		$(".mycount").attr("src", "images/my_un.png");
+		$(".help").attr("src", "images/help_un.png");
+	});
+</script>
+<div id="header" data-role = "header" data-position = "fixed"data-tap-toggle="false">
+	<div class="left_icon"><a><img class="left_icon_image" src = "images/back.png"/></a></div>
+	<div class="header_input">
+		<span class="shopdt_title">确认退还商品</span>
+	</div>
+</div>
+
+
+<div data-role = "content" class="content" style="background-color: #FFF;">
+	<div class="order_head_f">
+		<table class="checkorder_msg">
+			<tr>
+			<td><span class="color_att">订单编号：</span><span class="color_des">E8234009234</span></td>
+			<td><span class="color_att">订单类型：</span><span class="color_des">实体商铺订货</span></td>
+			</tr>
+			<tr>
+			<td><span class="color_att">订单状态：</span><span class="color_des">待确认退货</span></td>
+			<td></td>
+			</tr>
+		</table>
+	</div>
+	<!--店铺名称， 商品列表 -->
+	<div class="fov_shop">
+		<div class="fov_float_left clearfix gray" onclick="show_fov_product(this);">
+	    	<div><img src="images/shop/shop_1.jpg" class="fov_shop_photo"/></div>
+	        <div class="for_h_p"><p class="fov_shop_font color_shop">大叔青椒商铺</p>
+	        	<p class="fov_address_font">辽宁省 大连市 毛线沟县 毛线沟乡 毛线沟镇88号</p></div>
+	    	<div><img src="images/Arrow-1.png" class="fov_btn_down"/></div>
+	    </div>
+		<div class="for_product">
+			<div class="line_dashed">
+				<table cellspacing="0" cellpadding="0">
+					<tr>
+						<td rowspan="3"><img class="for_mid_img" src="images/commodity/commodity_1.jpg"/></td>
+						<td><span class="cuxiao">促销</span><span class="fov_shop_font color_title" style="font-size:0.75em">[买一斤送一斤]上好的顶级泡菜</span></td>
+					</tr>
+					<tr style="height: 50px;">
+						<td><span class="newprice"><span class="yang">￥</span>3.2</span></span><span class="jin">/斤</span>
+						<span style="margin-left: 20%;">20</span><span class="jin">斤</span>
+						<span style="float: right;" class="newprice"><span class="yang">￥</span>64</span></td>
+					</tr>
+					<tr><td></td></tr>
+				</table>
+			</div>
+			<div class="line_dashed">
+				<table cellspacing="0" cellpadding="0">
+					<tr>
+						<td rowspan="3"><img class="for_mid_img" src="images/commodity/commodity_3.jpg"/></td>
+						<td><span class="cuxiao">促销</span><span class="fov_shop_font color_title" style="font-size:0.75em">[买一斤送一斤]上好的顶级</span></td>
+					</tr>
+					<tr style="height: 50px;">
+						<td><span class="newprice"><span class="yang">￥</span>3.2</span></span><span class="jin">/斤</span>
+						<span style="margin-left: 20%;">20</span><span class="jin">斤</span>
+						<span style="float: right;" class="newprice"><span class="yang">￥</span>64</span></td>
+					</tr>
+					<tr><td></td></tr>
+				</table>
+			</div>
+			<div>
+				<table cellspacing="0" cellpadding="0">
+					<tr>
+						<td rowspan="3"><img class="for_mid_img" src="images/commodity/commodity_2.jpg"/></td>
+						<td><span class="cuxiao">促销</span><span class="fov_shop_font color_title" style="font-size:0.75em">[买一斤送一斤]上好的顶级</span></td>
+					</tr>
+					<tr style="height: 50px;">
+						<td><span class="newprice"><span class="yang">￥</span>3.2</span></span><span class="jin">/斤</span>
+						<span style="margin-left: 20%;">20</span><span class="jin">斤</span>
+						<span style="float: right;" class="newprice"><span class="yang">￥</span>64</span></td>
+					</tr>
+					<tr><td></td></tr>
+				</table>
+			</div>
+	    </div>
+	</div>
+	<div class="clearfix">
+	<div class="checkorder_total"><span class="total">共计：</span><span class="newprice"><span class="yang">￥</span>64</span></div>
+	</div>
+	<div class="checkorder_zhifu">
+		<div class="for_zhifu">
+		<ul>
+			<li class="fov_float_left clearfix"><div>支付方式&nbsp;&nbsp;</div><div class="checkorder_btn_l"></div><div class="zhifu zhifu_1">信用卡支付</div><div class="checkorder_btn_r"></div></li>
+			<li class="fov_float_left clearfix"><div>定金支付比例（首期）&nbsp;&nbsp;&nbsp;&nbsp;</div><div class="zhifu zhifu_2">11</div><div>%</div></li>
+			<li class="fov_float_left clearfix"><div>定金支付金额（首期）￥</div><div class="zhifu zhifu_3">111</div></li>
+			<li class="fov_float_left clearfix"><div>交付方式&nbsp;&nbsp;</div><div class="checkorder_btn_l"></div><div class="zhifu zhifu_1">自提</div><div class="checkorder_btn_r"></div></li>
+			<li class="fov_float_left clearfix"><div>交付时间&nbsp;&nbsp;</div><div class="zhifu zhifu_6">2014</div><div class="zhifu_date">年</div><div class="zhifu zhifu_4">12</div><div class="zhifu_date">月</div><div class="zhifu zhifu_4">12</div><div class="zhifu_date">日</div></li>
+			<li class="fov_float_left clearfix"><div>尾款支付金额￥&nbsp;&nbsp;</div><div class="zhifu zhifu_5">111</div></li>
+		</ul>
+		</div>
+		<div class="zhifu_btn fov_float_left clearfix">
+			<div class="zhifu_tj" style="margin-left: 24%;">确认退还商品</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="js/libs/orderstyle.js"></script>
+<script type="text/javascript" src="js/libs/fold.js"></script>
+  <script type="text/javascript" src="js/libs/headerinput.js"></script>

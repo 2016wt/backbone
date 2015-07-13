@@ -1,0 +1,250 @@
+<!--我的订单-->
+
+<script>
+	$(function(){
+		$(".home").attr("src", "images/home_uh.png");
+		$(".myorder").attr("src", "images/order_is.png");
+		$(".mycount").attr("src", "images/my_un.png");
+		$(".help").attr("src", "images/help_un.png");
+		if(localStorage.getItem("orderflag")==1){
+			$("#shop-commodidy1").remove();
+		}
+	   $(".shop_add").on("vmousedown",function(){
+			$(this).attr('src','images/minus-2.png');
+		});
+		$(".shop_add").on("vmouseup",function(){
+			$(this).attr('src','images/minus.png');
+		});
+		 $(".shop_reduce").on("vmousedown",function(){
+			$(this).attr('src','images/plus-2.png');
+		});
+		 $(".shop_reduce").on("vmouseup",function(){
+			$(this).attr('src','images/plus.png');
+		});
+	});
+</script>
+
+<div id="header" data-role = "header" data-position = "fixed"data-tap-toggle="false">
+	<div class="left_icon"><a><img class="left_icon_image" src = "images/back.png"/></a></div>
+	<div class="header_input">
+		  <span class="shopdt_title">购买</span>
+	</div>
+</div>
+<div data-role = "content" class="content" style="background-color: #FFF;">
+	<div class="order_head_f" style="margin-bottom:11px;">
+		<div id="kj_div_f" class="fov_float_left clearfix">
+			<div id="kjdiv_1" class="kjdiv_1">实体商铺购买</div>
+			<div id="kjdiv_2" class="kjdiv_2">网上商城购买</div>
+		</div>
+		<div id="buy_st">
+			<div class="ord_time fov_float_left clearfix"> 
+				<div class="time_point"></div>
+				<div class="time_line"></div>
+				<div class="time_point_2"></div>
+				<div class="time_line_2"></div>
+				<div class="time_point_2"></div>
+			</div>
+			<div class="time_text fov_float_left clearfix" style="margin-left:5px;">
+				<div>提交订单</div><div>支付</div><div>现场提货</div>
+			</div>
+		</div>
+		<div id="buy_net" style="display:none;">
+			<div class="ord_time fov_float_left clearfix"> 
+				<div class="time_point"></div>
+				<div class="time_line"></div>
+				<div class="time_point_2"></div>
+				<div class="time_line_2"></div>
+				<div class="time_point_2"></div>
+				<div class="time_line_2"></div>
+				<div class="time_point_2"></div>
+			</div>
+			<div class="time_text fov_float_left clearfix" style="margin-left:5px;">
+				<div>提交订单</div><div>审核订单</div><div>支付</div><div>确认收货</div>
+			</div>
+		</div>
+	</div>
+	<!--店铺名称， 商品列表 -->
+	<div style="padding-left: 10px; border-bottom: 1px solid rgb(216, 203, 203);" >
+	
+	<div style="margin-left:-10px;" id="R_a_click">
+      	<div id="shop-commodidy" class="fov_float_left clearfix gray" style="height: 79px;border-top: 1px solid rgb(216, 203, 203);">
+	    	<div style="margin-left:5px;"><img src="images/shop/shop_1.jpg" class="fov_shop_photo"/></div>
+
+	        <div class="for_h_p"><p class="color_shop" style="margin-bottom: 5px; font-size: 105%;"><%=data.shopName%></p>
+	        	<p class="color_add" style="font-size: 0.9em; margin-top: 10px;"><%=data.shopAddress%></p></div>
+
+	    	<div style="float: right; margin-right: 10px;"><img id="img_sx" src="images/Arrow-1.png" style="width: 16px; height: 16px; margin: 25px 5px;"/></div>
+	    </div>
+		<div id="shop-commodidy1" class="shop-commodidy1" style="border-top: 1px solid rgb(216, 203, 203);" >	
+             <div><img src="images/commodity/commodity_1.jpg" style="margin-left: 5px;" class="for_mid_img"></div>
+                <div style="margin-top: -77px; margin-left: 108px;" class="">
+	                <div style="padding-left: 10px;">
+
+	                  <span class="listview_ul_li_aure color_title"><%=data.goodsName%></span>
+
+	                </div>
+	                 <div style="height: 30px;">
+	                 <div style="width: 45%; float: left;margin-left:10px;margin-top: 5px;">
+	                 <span class="listview_ul_li_priceP">￥</span>
+                       <span class="listview_ul_li_price"><%=data.discountPrice%>
+	                    </span></div> </div> 
+	                    <div style="height: 27px; width: 100%;">
+	                     <div style="width: 45%;  float: left;margin-left:10px;">                 
+                       <img style="float: left; margin-top: 0.6em; width: 18px; height: 18px; margin-right: 3px;" src="images/plus.png" id="shop_reduce" class="shop_reduce">
+
+		                   <span style="float: left; margin-top: 2px; margin-right: 3px; font-size: 1.5em; font-weight: 100;" class="listview_ul_li_unitS math_a"><%=data.saleNum%></span>
+
+	                   <span style="font-size: 0.8em; float: left; margin-top: 1em; font-weight: 100; margin-right: 3px;" class="listview_ul_li_unitJ">斤</span>
+
+		               <img style="float: left; margin-top: 0.6em; margin-right: 3px; width: 18px; height: 18px;" src="images/minus.png" id="shop_add" class="shop_add">
+	     </div>            
+	                </div>
+     	</div>
+     	</div>
+     	
+    	<div id="shop-commodidy2" class="shop-commodidy2">
+             <div><img src="images/commodity/commodity_2.jpg" style="margin-left: 5px;" class="for_mid_img"></div>
+                <div style="margin-top: -77px; margin-left: 108px;">
+	                <div style="padding-left: 10px;">
+
+	                  <span class="listview_ul_li_aure color_title">[买一斤送一斤]新鲜水果</span>
+
+	                </div>
+	               <div style="height: 30px;">
+	                   <div style="width: 45%; float: left;margin-left:10px;margin-top: 5px;">
+		                 	<span class="listview_ul_li_priceP">￥</span>
+		                    <span class="listview_ul_li_price">3.20</span>
+	                   </div> 
+                   </div> 
+                   <div style="height: 27px; width: 100%;">
+	                    <div style="width: 45%; float: left;margin-left:10px;">                 
+	                       <img style="float: left; margin-top: 0.6em; width: 18px; height: 18px; margin-right: 3px;" src="images/plus.png" id="shop_reduce" class="shop_reduce">
+			                   <span style="float: left; margin-top: 2px; margin-right: 3px; font-size: 1.5em; font-weight: 100;" class="listview_ul_li_unitS math_a">1</span>
+		                   <span style="font-size: 0.8em; float: left; margin-top: 1em; font-weight: 100; margin-right: 3px;" class="listview_ul_li_unitJ">斤</span>
+	
+			               <img style="float: left; margin-top: 0.6em; margin-right: 3px; width: 18px; height: 18px;" src="images/minus.png" id="shop_add" class="shop_add">
+	     				</div>            
+               	   </div>
+				</div>
+		</div>
+	</div>	
+	</div>
+	<div class="for_zhifu">
+		<ul>
+			<li class="clearfix">
+			<div class="table_hand1_td1" style="padding:0px;margin-left:0px;" >
+				<span class="table_tr1_tdsj" style="padding:0px;margin-right: -10px;line-height: 1.6em;" >3.20</span>
+				<span class="table_tr1_tdsf" >￥</span>
+				<span class="table_tr1_tdsg" style="font-size: 0.8em;margin-top: 0.8em;" >共计：</span>
+			</div>
+			</li>
+		<li class="fov_float_left clearfix"><div class="font_z">支付方式</div>
+		<div id="left_div_1" class="zhifu_up">
+               <img class="img_h_l" src="images/carat-left.png"></div>
+               <div class="xinyong" id="zhifu_div"><%=data.payMode%></div>
+               <div id="left_div_1" class="zhifu_ups"> <img class="img_h_l"  src="images/arrow-right.png">
+               </div>
+        </li>		
+			<li class="fov_float_left clearfix"><div class="font_z">交付方式</div>
+			<div id="left_div_1" class="tihuo_down">
+                 <img class="img_h_l"  src="images/carat-left.png">
+
+            </div>
+            <div class="xinyong" id="tihuo"><%=data.depositType%></div>
+            <div class="xinyong" id="tihuo_2" style="display:none;">自提</div>
+            <div id="left_div_1" class="tihuo_downs">
+                <img class="img_h_l" src="images/arrow-right.png">
+            </div>
+           </li>
+         </ul>
+		<div class="fov_float_left clearfix"><div class="button_left">取消</div><div class="gotopay button_right">提交</div></div>
+	</div>
+
+</div>
+ 
+	<script>
+	/*
+	//提货方式
+	var arr = ['现场提货','快递免运费','快递运费到付'];
+   //支付方式
+	var brr = ['快捷支付','信用卡支付','第三方支付'];
+	var j=2;
+	var n=2;
+	$(".tihuo_down").on('click',function(){
+	if(j<0){
+		$("#tihuo").text(arr[1]);
+		j=2;
+	}else if(j==3){
+	    $("#tihuo").text(arr[0]);
+		 j=1;
+	}else{
+	  $("#tihuo").text(arr[j]);
+		j++;
+	}
+		
+	});
+	$(".tihuo_downs").on('click',function(){
+	if(j==3){
+	  $("#tihuo").text(arr[1]);
+		j=0;	
+	}else if(j<0){
+	  $("#tihuo").text(arr[2]);
+		j=1;
+	}else{  
+	  $("#tihuo").text(arr[j]);
+		j--;
+	}
+	
+	
+	});
+	$(".zhifu_up").on('click',function(){
+	
+	if(n<0){
+		$("#zhifu_div").text(brr[1]);
+		n=2;
+	}else if(n==3){
+	    $("#zhifu_div").text(brr[0]);
+		 n=1;
+	}else{
+	  $("#zhifu_div").text(brr[n]);
+		n++;
+	}
+		
+	}); 
+	$(".zhifu_ups").on('click',function(){
+	
+	if(n==3){
+	  $("#zhifu_div").text(brr[1]);
+		n=0;	
+	}else if(n<0){
+	  $("#zhifu_div").text(brr[2]);
+		n=1;
+	}else{  
+	  $("#zhifu_div").text(brr[n]);
+		n--;
+	}
+	
+	});*/
+	$("#kjdiv_1").on('click',function(){
+		$(this).removeClass();
+		$(this).addClass("kjdiv_1");
+		$(this).next().removeClass();
+		$(this).next().addClass("kjdiv_2");
+		$("#buy_st").show();
+		$("#buy_net").hide();
+		$("#tihuo").show();
+		$("#tihuo_2").hide();
+	});
+	$("#kjdiv_2").on('click',function(){
+		$(this).removeClass();
+		$(this).addClass("kjdiv_1");
+		$(this).prev().removeClass();
+		$(this).prev().addClass("kjdiv_2");
+		$("#buy_st").hide();
+		$("#buy_net").show();
+		$("#tihuo_2").show();
+		$("#tihuo").hide();
+	});
+	</script>
+
+  <script type="text/javascript" src="js/libs/headerinput.js"></script>

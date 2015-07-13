@@ -1,0 +1,64 @@
+<script  type="text/javascript">
+	$(function(){
+		var winHeight=$(window).height()-121;
+		$("#content").css("height",winHeight);
+		$("#content").css("width","100%");
+		//账号获取焦点
+		$('.username').on("focus",function(){
+			var value = $('.username').val();
+			if(value=="用户名"){
+			 $('.username').val("");
+			 $('.username').css('color','#666');
+			}
+		});
+		//账号失去焦点事件
+		$('.username').on("blur",function(){
+			var value = $('.username').val();
+			if(value==""){
+			 $('.username').val("用户名");
+			 $('.username').css('color','#999');
+			}
+		});
+		//密码获取焦点
+		$('.password').on("focus",function(){
+			var value = $('.password').val();
+			if(value=="密码"){
+			 $('.password').val("");
+			 $(this).attr('type','password'); 
+			 $('.password').css('color','#999');
+			}
+		});
+		//密码失去焦点
+		$('.password').on("blur",function(){
+			var value = $('.password').val();
+			if(value==""){
+			 $('.password').val("密码");
+			 $(this).attr('type','text'); 
+			 $('.password').css('color','#999');
+			}
+		});
+		});
+		
+</script>
+
+<div id="header" data-position="fixed" data-role = "header" data-position = "fixed" style="position: fixed;"data-tap-toggle="false">
+    <div class="left_icon"><a><img class="left_icon_image" src = "images/back.png"/></a></div>
+    <div class="login_header_text">惠农金网</div>
+</div>
+<div data-role="content" class = "content" id = "content">	
+	<div class ="middle">
+		<div>
+			<input data-role="none" type="text" value="用户名" name ="name" id="username" class="username login_input_style"  style="background:url('images/login1.png') no-repeat 10px center;background-color:#edebec;background-size:18px;">
+		</div>
+		<div>
+			<input data-role="none" value="密码" class="password login_input_style" type="text" name ="password" id="password" autocomplete="off" style="background:url('images/login2.png') no-repeat 10px center ;background-color:#edebec;background-size:18px;">
+		</div>
+		<div class="ui-grid-a" style="margin-top: 4%;">
+		    <div class="ui-block-a"style="width:43.75%;"><div class="login_cancel"><div style="font-size: 1em;background:#e0e0e0;padding:.2em 1em;text-shadow: initial;color:#84c75e;line-height: 28px;">取消</div></div></div>
+		    <div class="ui-block-b"style="width:53.125%;margin-left:3.125%;"><div class="menu_link login_lg"><div class="button" style="background:#faae25;font-size: 1.2em;padding:.2em 1em;text-shadow: initial;color: #fff;">登录</div></div></div>
+		  	<div class="ui-block-a" style="width:30%"></div>
+		    <div class="ui-block-b" style="width:70%"><div class="login_forget"><div class="login_img_left">忘记密码</div><img src="images/login3.png"class="login_img_psw"></div></div>
+		</div>
+	</div>
+</div>
+

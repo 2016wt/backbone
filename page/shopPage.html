@@ -1,0 +1,176 @@
+<!--商品详情-->
+
+<!--加载头部样式  -->
+<script type="text/javascript" src="js/libs/headerinput.js"></script>
+<script>
+	$(function(){
+	  if(localStorage.getItem("ShopDetai_flag")=='1'){
+        var hsp=localStorage.getItem("hsp");
+        var src=localStorage.getItem("src");
+        $('.title>span').text(hsp);
+        $('.img-style').attr("src",src);
+        }
+        //商铺名称
+        if(localStorage.getItem("hasshop")){
+        var shopname=localStorage.getItem("shop_name");
+        $('#shop_name').text(shopname);
+        }
+		//交替换色
+		$('.one_tabl_1 tr:odd').attr('style','background-color:#EAEAEA');
+		$('.one_tabl_1 tr:even').attr('style','background-color:white');
+		
+		$('.navbar_li_a').addClass('ui-btn-active');
+		//加载时定宽度
+		var width=$(window).width();
+		setTimeout(function(){
+			$('#cont_1').css({"position":"fixed","width":(width-21)+"px"});
+		},550);
+		//点击出现选择框 
+		$('.span_style_a').on('click',function(){
+			$('.choosecolor').css('display','block');
+		});		
+		$('.choosecolor div').on('click',function(){
+			var index = $(this).index();
+			$('.choosecolor').css('display','none');
+			var textcolor = $('.choosecolor').children().eq(index).text();
+			$('.test').text(textcolor);
+			//被点中的选项变色
+			$('.choosecolor').children().eq(index).css('background-color','#cde9be').siblings().css('background','#f3ffee');
+		});		
+	});
+</script>
+
+<style>
+	.ui-page-theme-a .ui-btn.ui-btn-active{
+		border-color:#CDCDCD !important;
+		color: #6F6F6F !important;
+	} 
+	#one_style_a_b .ui-btn-active {
+		background-color:#fff !important;	
+	}
+	.ui-page-theme-a .ui-btn {
+		color:#50A625 !important;
+}
+	.ui-navbar .ui-btn {
+		box-shadow:none!important;
+		border:0px;	
+}	
+	#one_style_a_b .ui-btn {
+		background-color:#EAEAEA;
+	}
+
+</style>
+
+
+<div id="header" data-role = "header" data-position = "fixed"data-tap-toggle="false">
+	<div class="left_icon"><a><img class="left_icon_image" src = "images/back.png"/></a></div>
+	<div class="header_input">
+		<span class="shopdt_title">商品详情</span>
+	</div>
+</div>
+	
+<div data-role="content" style="background-color:white;" class="content"data-tap-toggle="false">
+	<div id="cont_1" class="title-size" style="padding:0px 10px 0px 11px;left:0;top:64px;" >
+	    <div class="title" >
+	    	<span><%=data.goodsName%></span>
+	    </div>  
+	    <div class="font-size">
+	    	<div>
+
+		    	 <div ><img  class="img-style" src="images/commodity/commodity_9.jpg"/></div>
+			     <div class="detitle-font">
+
+				     <div class="span_check_a"><div><span class="span_check_b">收藏</span></div><img class="span_img_a" style="margin-top: -2em;margin-right: 0.4em;" src="images/s-1.png"/></div>
+					 <div style="position:fixed;width: 40px;height: 31px;top: 96px;right:10px" id="fav_click"></div>
+			         <div style="margin-left: -1.2em;"><p><span class="span-1_1">￥</span><span class="span-1" ><%=data.originalPrice%></span><span class="font_size_span_size">/斤</span></p></div>
+			         <div style="margin-left: -1.1em;"><p class="span_p_style"><span class="span_p"><span class="span-1_2">￥</span><span class="span-2"><%=data.originalPrice%></span></span></p></div>
+
+			         <div class="span_div_a"><div style="margin-top: 1.5em; margin-left: 1.5em;"><span>属性</span></div><div class="span_style_a"><div style="margin-top: 5px; margin-left: 8px;"><span style="font-size: 1.1em;color: #656C61;" class="test">红色</span></div></div>
+				         <div class="choosecolor" style="z-index: 9999;position:absolute; margin-top: -7em;display:none;margin-left: 4.2em;">
+					     	<div style="background: #f3ffee;border:1px solid #83c75d;border-bottom: 0px;">黄色</div>
+					     	<div style="background: #f3ffee;border:1px solid #83c75d;border-bottom: 0px;">绿色</div>
+					     	<div style="background: #cde9be;border:1px solid #83c75d;border-bottom: 0px;">红色</div>
+					     	<div style="background: #f3ffee;border:1px solid #83c75d;border-bottom: 0px;">黑色</div>
+					     	<div style="background: #f3ffee;border:1px solid #83c75d;">白色</div>
+					     </div>
+			         </div>
+			         <div class="font_size"><p class="span_p_style_1"><span class="span-3" ><%=data.supportNum%>个<img src="images/icons-png/iconfont-zanyang.png"></span></p></div>
+			         <div><p class="span_p_style_2"><span class="span-3" ><%=data.saleVolume%>笔销量</span></p></div>
+			         <div style="text-align: center;"><span id="shop_name" class="span_check_size">大青椒商铺</span></div>
+			     </div>
+
+	    	</div>    
+	    </div>    
+	    <div id="grid" class="ui-grid-b-1" align="center">
+	       <div class="gotofavorite ui-block-a-1"><span style="line-height: 2.9em;">加入购物车</span></div>
+	       <div class="gotobuy ui-block-b-2">立即购买</div>
+	       <div class="gotoshopcar ui-block-c-3"><span style="line-height: 2.8em;">立即预订</span></div>
+	    </div>
+	    <div style="border-bottom: 1px solid #cdcdcd;height: 36px;margin-top: -4px;">
+		    <div data-role="navbar" id="one_style_a_b" class="one_style_a">
+			    <ul style="border-right: 1px solid #cdcdcd;height: 36px;overflow: hidden;">
+			      <li class="navbar_li_size"><a class="navbar_li_a" data-ajax="false"><span >商品详情</span></a></li>
+			      <li class="navbar_li_b_s"><a data-ajax="false"><span>商品评价</span></a></li>		   
+			    </ul>
+	  		</div>
+  		</div>
+    </div>
+    <div class="cont_table_style" id="TBL_1"style="margin-left:11px;margin-right:10px;border-bottom: 1px solid #CDCDCD;">
+    	<table id="one_table_a" class="one_tabl_1" cellspacing="0" cellpadding="0">
+    		<tr><td><span class="table_span_td_a">名称</span></td><td><span class="table_span_td_b"><%=data.goodsName%></span></td></tr>
+    		<tr><td><span class="table_span_td_a">规格</span></td><td><span class="table_span_td_b"><%=data.goodsDesc%></span></td></tr>
+    		<tr><td><span class="table_span_td_a">店铺</span></td><td><span class="table_span_td_b"><%=data.shopName%></span></td></tr>
+    		<tr><td><span class="table_span_td_a">乡</span></td><td><span class="table_span_td_b"><%=data.shopSeatGeoName%></span></td></tr>
+    		<tr><td><span class="table_span_td_a">镇</span></td><td><span class="table_span_td_b"><%=data.shopTownshipGeoName%></span></td></tr>
+    		<tr><td><span class="table_span_td_a">描述</span></td><td><span class="table_span_td_b"><%=data.goodsDesc%></span></td></tr>
+    		<tr><td><span class="table_span_td_a">名称</span></td><td><span class="table_span_td_b">名称名称名称名称名称</span></td></tr>
+    		<tr><td><span class="table_span_td_a">规格</span></td><td><span class="table_span_td_b">规格规格规格规格规格规</span></td></tr>
+    		<tr><td><span class="table_span_td_a">店铺</span></td><td><span class="table_span_td_b">青椒店铺</span></td></tr>
+    		<tr><td><span class="table_span_td_a">乡</span></td><td><span class="table_span_td_b">乡乡乡乡乡乡乡乡</span></td></tr>
+    		<tr><td><span class="table_span_td_a">镇</span></td><td><span class="table_span_td_b">镇镇镇镇镇镇镇</span></td></tr>
+    		<tr><td><span class="table_span_td_a">描述</span></td><td><span class="table_span_td_b">描述描述描述描述描述</span></td></tr>
+    	</table>
+    </div>
+    <div class="cont_table_style_2" id="TBL_2">
+    	<div style="line-height: 2em;">
+    		<div style="float: left; font-size: 1.3em; margin-left: 3em;"><span>评价商品</span></div>
+    		<div class="starWrapper1" style="line-height: 1em;text-align: center;">
+				<img src="images/1.jpg" title="1分" />&nbsp;<img src="images/1.jpg" title="2分" />&nbsp;<img src="images/1.jpg" title="3分" />&nbsp;<img src="images/1.jpg" title="4分" />&nbsp;<img src="images/1.jpg" title="5分" />
+			</div>
+    	</div>
+    	<table border="1"  bordercolor="#cdcdcd" id="one_table_a_b" class="one_tabl_1" cellspacing="0" cellpadding="0">
+    		<thead><tr><td>会员</td><td>时间</td><td>评价</td></tr></thead>
+    		<tr>
+    			<td>张三</td>
+    			<td>2014-12-3</td>
+    			<td>很新鲜</td>
+    		</tr>
+    		<tr>
+    			<td>李四</td>
+    			<td>2014-12-3</td>
+    			<td>很新鲜</td>
+    		</tr>
+    		<tr>
+    			<td>王五</td>
+    			<td>2014-12-3</td>
+    			<td>很新鲜</td>
+    		</tr>
+    		<tr>
+    			<td>赵六</td>
+    			<td>2014-12-3</td>
+    			<td>很新鲜</td>
+    		</tr>
+    		<tr>
+    			<td>张倩</td>
+    			<td>2014-12-3</td>
+    			<td>很新鲜</td>
+    		</tr>
+    		<tr>
+    			<td>赵灵儿</td>
+    			<td>2014-12-3</td>
+    			<td>很新鲜</td>
+    		</tr>
+    	</table>
+    </div>
+</div> 
+

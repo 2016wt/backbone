@@ -1,0 +1,195 @@
+<!--生成远期订单 myForwardOrderPage.html written by csw-->
+<script src="dev/js/mobiscroll.js" type="text/javascript"></script>
+<script src="dev/js/mobiscroll.core.js" type="text/javascript"></script>
+<script src="dev/js/mobiscroll.core-zh.js" type="text/javascript"></script>
+<link href="dev/css/mobiscroll.custom.min.css" rel="stylesheet" type="text/css" />
+<script src="dev/js/mobiscroll.datetime.js" type="text/javascript"></script>
+<script src="dev/js/mobiscroll.datetime-zh.js" type="text/javascript"></script>
+<script src="dev/js/mobiscroll.android-ics.js" type="text/javascript"></script>
+<link href="dev/css/mobiscroll.android-ics.css" rel="stylesheet" type="text/css" />
+<script>
+	$(function(){
+		$(".home").attr("src", "images/home_uh.png");
+		$(".myorder").attr("src", "images/order_is.png");
+		$(".mycount").attr("src", "images/my_un.png");
+		$(".help").attr("src", "images/help_un.png");
+		if(localStorage.getItem("forwardflag")==1){
+			$(".for_product>div:first-child").remove();
+		}
+		$(".SC_plus").on("vmousedown",function(){
+			$(this).attr('src','images/plus-2.png');
+		});
+		$(".SC_plus").on("vmouseup",function(){
+			$(this).attr('src','images/plus.png');
+		});
+		 $(".SC_minus").on("vmousedown",function(){
+			$(this).attr('src','images/minus-2.png');
+		});
+		 $(".SC_minus").on("vmouseup",function(){
+			$(this).attr('src','images/minus.png');
+		});
+		
+		//日期弹出框
+		 var newjavascript={
+	     plugdatetime:function ($dateTxt,type) {
+		var currYear = (new Date()).getFullYear();
+	           var opt = {}
+		       opt.time = {preset : type};
+	           opt.date = {preset : type};
+	           opt.datetime = { 
+			preset : type, 
+			stepMinute: 1  
+		   };
+	             $dateTxt.val('').scroller('destroy').scroller(
+					$.extend(opt[type], 
+						{ 
+							theme:"android-ics",
+							mode: "scroller", 
+							display: "modal", 
+							lang: "zh",
+							setText: '确定',
+							cancelText: '取消',
+							dateFormat: 'yy-mm-dd',
+							startYear:currYear-10, //开始年份
+							endYear:currYear+100//结束年份
+						}
+					)
+				);
+	        }
+			
+		
+	}
+	 newjavascript.plugdatetime($("#finish_time"), "date"); 
+	   $("#finish_time").change(function(){
+			var year=$(this).val().substring(0,4);
+			var month=$(this).val().substring(5,7);
+			var day=$(this).val().substring(8,10);
+			 $("#fin_time div").eq(2).text(year);
+			  $("#fin_time div").eq(4).text(month);
+			   $("#fin_time div").eq(6).text(day);	   
+	   });
+	});
+</script>
+<div id="header" data-role = "header" data-position = "fixed"data-tap-toggle="false">
+	<div class="left_icon"><a><img class="left_icon_image" src = "images/back.png"/></a></div>
+	<div class="header_input">
+		<span class="shopdt_title">预订</span>
+	</div>
+</div>
+
+<div data-role = "content" class="content" style="background-color: #FFF;">
+	<div class="order_head_f">
+		<div id="yq_div_f">实体商铺预订</div>
+		<div class="ord_time fov_float_left clearfix"> 
+			<div class="time_point"></div>
+			<div class="time_line"></div>
+			<div class="time_point_2"></div>
+			<div class="time_line_2"></div>
+			<div class="time_point_2"></div>
+			<div class="time_line_2"></div>
+			<div class="time_point_2"></div>
+			<div class="time_line_2"></div>
+			<div class="time_point_2"></div>
+		</div>
+		<div class="time_text fov_float_left clearfix" style="margin-bottom: -1px;">
+			<div>提交订单</div><div>支付定金</div><div>备货</div><div>支付尾款</div><div>确认收货</div>
+		</div>
+	</div>
+	<!--店铺名称， 商品列表 -->
+	<div class="fov_shop">
+		<div class="fov_float_left clearfix gray" onclick="show_fov_product(this);">
+	    	<div><img src="images/shop/shop_1.jpg" class="fov_shop_photo"/></div>
+	        <div class="for_h_p"><p class="fov_shop_font color_shop">大叔青椒商铺</p>
+	        	<p class="fov_address_font">辽宁省 大连市 毛线沟县 毛线沟乡 毛线沟镇88号</p></div>
+	    	<div><img src="images/Arrow-1.png" class="fov_btn_down"/></div>
+	    </div>
+		<div class="for_product">
+			<div class="line_dashed">
+			<table>
+				<tr>
+					<td rowspan="3"><img class="for_mid_img" src="images/commodity/commodity_1.jpg"/></td>
+					<td><span class="fov_shop_font color_title" style="font-size:0.8em">[买一斤送一斤]上好的顶级青椒</span></td>
+				</tr>
+				<tr><td><span class="newprice for_price"><span class="yang">￥</span>3.20</span></td></tr>
+				<tr>
+					<td><div class="for_count"><img class="SC_plus" src="images/plus.png">
+					<span>1</span><span class="jin">斤</span>
+					<img class="SC_minus" src="images/minus.png"></div></td>
+				</tr>
+			</table>
+			</div>
+			<div>
+			<table>
+				<tr>
+					<td rowspan="3"><img class="for_mid_img" src="images/commodity/commodity_2.jpg"/></td>
+					<td><span class="fov_shop_font color_title" style="font-size:0.8em">[买一斤送一斤]上好的顶级青椒</span></td>
+				</tr>
+				<tr><td><span class="newprice for_price"><span class="yang">￥</span>3.20</span></td></tr>
+				<tr>
+					<td><div class="for_count"><img class="SC_plus" src="images/plus.png">
+					<span>1</span><span class="jin">斤</span>
+					<img class="SC_minus" src="images/minus.png"></div></td>
+				</tr>
+			</table>
+			</div>
+	    </div>
+	</div>
+	<div class="clearfix">
+	<div class="checkorder_total"><span class="total">共计：</span><span class="newprice"><span class="yang">￥</span>64.00</span></div>
+	</div>
+	<div class="for_zhifu">
+		<ul>
+			<li class="fov_float_left clearfix"><div>支付方式&nbsp;&nbsp;</div><div id="zhifu_l" class="for_btn_l"></div><div class="zhifu zhifu_1">信用卡分期支付</div><div id="zhifu_r" class="for_btn_r"></div></li>
+			<li class="fov_float_left clearfix"><div>定金支付比例&nbsp;&nbsp;&nbsp;&nbsp;</div><div class="zhifu zhifu_2"><input value="11" data-role="none"></div><div>%</div></li>
+			<li class="fov_float_left clearfix"><div>定金支付金额￥</div><div class="zhifu zhifu_3" style="text-align:right;"><input value="111" data-role="none"></div></li>
+			<li class="fov_float_left clearfix"><div>违约金支付比例&nbsp;&nbsp;&nbsp;&nbsp;</div><div class="zhifu zhifu_2"><input value="11" data-role="none"></div><div>%</div></li>
+			<li class="fov_float_left clearfix"><div>违约金支付金额￥</div><div class="zhifu zhifu_3" style="text-align:right;"><input value="111" data-role="none"></div></li>
+			<li class="fov_float_left clearfix"><div>尾款支付金额￥&nbsp;&nbsp;&nbsp;&nbsp;</div><div class="zhifu zhifu_3">111</div></li>
+			<li class="fov_float_left clearfix"><div>交付方式&nbsp;&nbsp;</div><div id="jiaofu_l" class="for_btn_l"></div><div class="zhifu zhifu_1">自提</div><div id="jiaofu_r" class="for_btn_r"></div></li>
+			<li class="fov_float_left clearfix" id="fin_time" style="position: relative;">
+				<div>交付时间&nbsp;&nbsp;</div>
+				<div style="position:absolute;left: 88px;width:55%;"><input id="finish_time" data-role="none" style="width:100%;opacity:0"></div>
+				<div class="zhifu zhifu_6">2014</div><div class="zhifu_date">年</div>
+				<div class="zhifu zhifu_4">12</div><div class="zhifu_date">月</div>
+				<div class="zhifu zhifu_4">12</div><div class="zhifu_date">日</div>
+			</li>
+		</ul>
+		<div class="fov_float_left clearfix"><div class="zhifu_qx">取消</div><div class="gotopay zhifu_tj">提交</div></div>
+	</div>
+</div>
+<script>
+/*
+var zhifuarr=['信用卡分期支付','快捷支付','第三方支付'];
+var jiaofuarr=['确认收货','快递免运费','快递运费到付'];
+var zf_num=0;
+var jf_num=0;
+$("#zhifu_l").on('click',function(){
+	if(zf_num<=0){
+		zf_num=zhifuarr.length;
+	}
+	$(this).next().text(zhifuarr[--zf_num]);
+	});
+$("#zhifu_r").on('click',function(){
+	if(zf_num>=zhifuarr.length-1){
+		zf_num=-1;
+	}
+	$(this).prev().text(zhifuarr[++zf_num]);
+	});
+	
+$("#jiaofu_l").on('click',function(){
+	if(jf_num<=0){
+		jf_num=jiaofuarr.length;
+	}
+	$(this).next().text(jiaofuarr[--jf_num]);
+	});
+$("#jiaofu_r").on('click',function(){
+	if(jf_num>=jiaofuarr.length-1){
+		jf_num=-1;
+	}
+	$(this).prev().text(jiaofuarr[++jf_num]);
+	});
+*/
+</script>
+<script type="text/javascript" src="js/libs/orderstyle.js"></script>
+<script type="text/javascript" src="js/libs/fold.js"></script>
+  <script type="text/javascript" src="js/libs/headerinput.js"></script>

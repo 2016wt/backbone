@@ -1,0 +1,160 @@
+<!--<!DOCTYPE>-->
+<!--<html>-->
+<!--<head>-->
+<!--<META http-equiv="Content-Type" content="text/html; charset=UTF-8">-->
+<!--<meta charset="UTF-8">-->
+<!--<title>projectApp</title>-->
+<!--<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" name="viewport">-->
+<!--&lt;!&ndash;old css&ndash;&gt;-->
+<!--&lt;!&ndash;<link href="css/jquery.mobile.min.css" rel="stylesheet" type="text/css"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    <link href="css/public.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="css/idangerous.swiper.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="css/idangerous.swiper.scrollbar.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="css/commodity.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="css/favorite.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="css/menu.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="css/shop.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="css/myorder.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="css/myforwardorder.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="css/checkorder.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="css/checkshop.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="css/login.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="css/iscroll.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="css/myAccount.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="css/detailsCancel.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="css/fastpay.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="css/firmOrder.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="css/checkMessage.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="css/shopdt.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="css/cancelList.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="css/appraise.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="css/myAppraise.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="css/checkAppraise.css" rel="stylesheet" type="text/css"/>&ndash;&gt;-->
+
+<!--<link href="css/jquery.mobile-1.4.5.css" rel="stylesheet" type="text/css"/>-->
+<!--&lt;!&ndash;flyco themeroller&ndash;&gt;-->
+<!--<link rel="stylesheet" type="text/css" href="../css/flycothemeroller.css">-->
+<!--&lt;!&ndash;jQuery Mobile css&ndash;&gt;-->
+
+<!--&lt;!&ndash;<link href="css/jquery.mobile.external-png-1.4.5.css" rel="stylesheet" type="text/css"/>&ndash;&gt;-->
+<!--<link href="../css/jquery.mobile.icons-1.4.5.css" rel="stylesheet" type="text/css"/>-->
+<!--&lt;!&ndash;<link href="css/jquery.mobile.inline-png-1.4.5.css" rel="stylesheet" type="text/css"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    <link href="css/jquery.mobile.inline-svg-1.4.5.css" rel="stylesheet" type="text/css"/>&ndash;&gt;-->
+<!--<link href="../css/jquery.mobile.structure-1.4.5.css" rel="stylesheet" type="text/css"/>-->
+<!--&lt;!&ndash;   <link href="css/jquery.mobile.theme-1.4.5.css" rel="stylesheet" type="text/css"/>&ndash;&gt;-->
+<!--<link rel="stylesheet" type="text/css" href="../css/myPage.css">-->
+<!--&lt;!&ndash;jquery&ndash;&gt;-->
+<!--<script src="../js/libs/jquery-2.1.3.js"></script>-->
+<!--<script src="../js/libs/jquery.mobile-1.4.5.js"></script>-->
+<!--</head>-->
+
+<!--<body>-->
+<!--<div data-role="page" id="pagelogon">-->
+<div data-role="header" data-position="fixed">
+    <a href="#my" data-role="button" data-icon="carat-l" data-iconpos="notext" data-theme="b"></a>
+
+    <h1>消息</h1>
+</div>
+<div data-role="content">
+    <style>
+        body,div[data-role="page"]{
+            z-index: -1!important;
+            height: 100%;
+        }
+        ul[data-role="listview"] > li{
+            position: relative;
+            z-index: 200;
+            background: #eee!important;
+        }
+        .delete{
+            width: 100px;
+            height: 82px;
+            position: absolute;
+            right:-100px;
+            top: 0px;
+            background: red;
+            z-index: -1;
+            text-align: center;
+            line-height: 80px;
+        }
+        time{
+            position: absolute;
+            top:1rem;
+            right: 1rem;
+            font-weight: normal;
+        }
+    </style>
+    <ul data-role="listview" data-theme="c" class="listview">
+        <li data-icon="false" class="ui-systemMessage">
+            <a href="#userMessageDetail">
+                <h3>系统</h3>
+                <time>4月28日</time>
+                <p>尊敬的用户您好</p></a>
+            <div class="delete">删除</div>
+        </li>
+        <li data-icon="false" class="ui-friendMessage">
+            <a><h3>爸爸</h3>
+                <time>4月28日</time>
+            <p>爸爸的消息内容</p></a>
+            <div class="delete">删除</div>
+        </li>
+        <li data-icon="false" class="ui-friendMessage">
+            <a><h3>爸爸</h3>
+                <time>4月28日</time>
+                <p>爸爸的消息内容</p></a>
+            <div class="delete">删除</div>
+        </li>
+        <li data-icon="false" class="ui-friendMessage">
+            <a><h3>爸爸</h3>
+                <time>4月28日</time>
+                <p>爸爸的消息内容</p></a>
+            <div class="delete">删除</div>
+        </li>
+    </ul>
+</div>
+<script>
+    function drag(obj){
+        var    startX,
+                moveX,
+                disX,
+                left;
+        obj.addEventListener('touchstart',function(e){
+            startX=e.targetTouches[0].pageX;
+            disX=startX-$(obj).offset().left;
+        });
+        obj.addEventListener('touchmove',function(e){
+            moveX=e.targetTouches[0].pageX;
+            left=moveX-disX;
+            $(obj).css({
+                left:left
+            });
+            if($(obj).offset().left>0){
+                $(obj).css({
+                    left:0
+                });
+            }else if($(obj).offset().left<-100){
+                $(obj).css({
+                    left:-100
+                });
+            }
+        });
+        obj.addEventListener('touchend',function(){
+            if($(obj).offset().left<-60){
+                $(obj).css({
+                    left:-100
+                });
+            }else{
+                $(obj).css({
+                    left:0
+                });
+            }
+        });
+    }
+    var obj=$('.listview>li');
+    for(var i=0;i<obj.length;i++){
+        drag(obj[i]);
+    }
+</script>
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->

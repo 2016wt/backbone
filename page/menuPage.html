@@ -1,0 +1,109 @@
+ <!--  首页-->
+  <script>
+  var mySwiper = new Swiper('.swiper-container',{
+    pagination: '.pagination',
+   	paginationClickable: true,
+    moveStartThreshold: 100,
+	loop:true,
+	autoplayDisableOnInteraction: true,
+	autoplay:2000
+  })
+  
+  //给滑动动画动态定义宽度,给content定义高度
+ 	$(function(){
+		var winHeight=$(window).height()-103;
+		$(".content").css("height",winHeight);
+		var winWidth=$(window).width()-12;
+		$(".swiper-container").css("width",winWidth);
+		$(".imgwidth").css("width",winWidth);
+ 		$('.main_page_click').addClass('ui-btn-active');
+ 		
+ 		
+		$(".search_hide").on("focus",function(){
+	
+			var inputvalue =$(".search_hide").val();
+			if(inputvalue=="搜索商品/商铺"){
+				$(".search_hide").val("");
+			}
+		});
+		
+	});
+  </script>
+<style>
+.ui-page-theme-a .ui-bar-inherit{
+	color: #333;
+	font-weight: 100;
+	text-shadow: 0px 0px 0px;
+}
+</style>
+
+<div id="header" data-position="fixed" data-role = "header" data-position = "fixed" style="position: fixed;"data-tap-toggle="false">       
+        <div class="header_input_new">
+        	<input class="search_hide_new" data-role="none" name="textinput-hide" id="search_hide"  placeholder="特大种子，磷肥，拖拉机" type="text" data-mini="true"/>
+        </div> 
+        <div style="float: right; margin-top: -1.5em;margin-right: 7px; width: 38%;">
+        	<table cellspacing="0" cellpadding="0" style="font-size: 0.7em;background-color: #50A625; width: 100%;">
+        		<tr>
+        			<td id="menu_find_shop" style="text-align: center;height: 30px;color: #FFF;border-right: 4px solid #83C75D;"><span>搜商品</span></td>
+        			<td id="menu_find_check" style="text-align: center;height: 30px;color: #FFF;"><span>搜商铺</span></td>
+        		</tr>
+        	</table>
+        </div>
+         <!--  <div style="margin-left: 8.5em; margin-top: -1.3em;"><img style="width: 20px;" src="images/find.png"/></div> -->
+</div>
+
+<div data-role="content" class="content" style="padding-top:3px;text-align:center;">
+	<div class="ui-grid-b" style="margin-left: 4px;margin-right: 4px;">
+	    <div id="farmmachinery"  class="ui-block-a imafe_border"><img src = "images/image1.png"class="content_image_width"/></div>
+	    <div id="king" class="ui-block-b imafe_border"><img src = "images/image2.png"class="content_image_width"/></div>
+	    <div id="necessities" class="ui-block-c imafe_border"><img src = "images/image3.png"class="content_image_width"/></div>
+	</div>	
+	
+	<div class="ui-grid-b" style="margin-left: 4px;margin-right: 4px;text-align:center;">
+	    <div id="chemical"   class="ui-block-a imafe_border"><img src = "images/image4.png"class="content_image_width"/></div>
+	    <div id = "seed" class="ui-block-b imafe_border"><img src = "images/image5.png"class="content_image_width"/></div>
+	    <div id="living" class="ui-block-c imafe_border"><img src = "images/image6.png"class="content_image_width"/></div>
+	
+	</div>
+	<div class="device">
+	    <div class="swiper-container">
+	      <div class="swiper-wrapper">
+	      <div class="swiper-slide">  
+				<img src = "images/shu.png" class = "imgwidth"/>
+	       </div>
+	        <div class="swiper-slide">  
+				<img src = "images/shui.png" class = "imgwidth"/>
+	       </div>
+	        <div class="swiper-slide">   
+				<img src = "images/mao.png"class = "imgwidth" />
+	        </div>
+	        <div class="swiper-slide">
+				<img src = "images/ju.png"class = "imgwidth"/>
+	        </div>
+	      </div>
+	    </div>
+	    <div class="pagination"></div>
+	</div>
+	<div id="sel_city">
+		
+	</div>
+	<div id="check_shop_by_add" style="margin-top: 0.6em;">
+		<div id = "clickone" class="ui-grid-b" style="margin-top:.3em;margin-left: 5px;margin-right: 5px;border-bottom:4px solid #fff;">
+		    <div  class="ui-block-a"style="border-right:2px solid #fff;"><div class="one" class="ui-bar ui-bar-a" style="height:40px;background :#d9d9d9;border:0;"><div class="next_text_style"><p>辽宁省 大连市</p><p>大枣区 <span>毛线乡</span></p></div><img src = "images/right_icon.png"class="icon_right"/></div></div>
+		    <div  class="ui-block-b"style="border-right:2px solid #fff;border-left:2px solid #fff;"><div class="two"class="ui-bar ui-bar-a" style="height:40px;background :#d9d9d9;border:0;"><div class="next_text_style"><p>辽宁省 大连市</p><p>大枣区 <span>胜利乡</span></p></div><img src = "images/right_icon.png"class="icon_right"/></div></div>
+		    <div  class="ui-block-c"style="border-left:2px solid #fff;"><div class="three" class="ui-bar ui-bar-a" style="height:40px;background :#d9d9d9;border:0;"><div class="next_text_style"><p>辽宁省 大连市</p><p>大枣区 <span>大王乡</span></p></div><img src = "images/right_icon.png"class="icon_right"/></div></div>
+		</div>
+		<div id = "clicktwo"class="ui-grid-b" style="margin-left: 5px;margin-right: 5px;border-bottom:4px solid #fff;">
+		    <div  class="ui-block-a"style="border-right:2px solid #fff;"><div class="four" class="ui-bar ui-bar-a" style="height:40px;background :#d9d9d9;border:0;"><div class="next_text_style"><p>辽宁省 大连市</p><p>大枣区 <span>新安乡</span></p></div><img src = "images/right_icon.png"class="icon_right"/></div></div>
+		    <div class="ui-block-b"style="border-right:2px solid #fff;border-left:2px solid #fff;"><div  class="five" class="ui-bar ui-bar-a" style="height:40px;background :#d9d9d9;border:0;"><div class="next_text_style"><p>辽宁省 大连市</p><p>大枣区 <span>胜利乡</span></p></div><img src = "images/right_icon.png"class="icon_right"/></div></div>
+		    <div  class="ui-block-c"style="border-left:2px solid #fff;"><div class="six" class="ui-bar ui-bar-a" style="height:40px;background :#d9d9d9;border:0;"><div class="next_text_style"><p>辽宁省 大连市</p><p>大枣区 <span>大王乡</span></p></div><img src = "images/right_icon.png"class="icon_right"/></div></div>
+		</div>
+		<div id = "clickthree"class="ui-grid-b" style="margin-left: 5px;margin-right: 5px;">
+		    <div  class="ui-block-a"style="border-right:2px solid #fff;"><div class="seven" class="ui-bar ui-bar-a" style="height:40px;background :#d9d9d9;border:0;"><div class="next_text_style"><p>辽宁省 大连市</p><p>大枣区 <span>新安乡</span></p></div><img src = "images/right_icon.png"class="icon_right"/></div></div>
+		    <div class="ui-block-b"style="border-right:2px solid #fff;border-left:2px solid #fff;"><div class="eight" class="ui-bar ui-bar-a" style="height:40px;background :#d9d9d9;border:0;"><div class="next_text_style"><p>辽宁省 大连市</p><p>大枣区 <span>胜利乡</span></p></div><img src = "images/right_icon.png"class="icon_right"/></div></div>
+		    <div class="ui-block-c"style="border-left:2px solid #fff;"><div class="nine" class="ui-bar ui-bar-a" style="height:40px;background :#d9d9d9;border:0;"><div class="next_text_style"><p>辽宁省 大连市</p><p>大枣区 <span>大王乡</span></p></div><img src = "images/right_icon.png"class="icon_right"/></div></div>
+		</div>
+	</div>
+
+</div> 
+	

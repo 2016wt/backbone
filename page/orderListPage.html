@@ -1,0 +1,282 @@
+<!--订单列表-->
+
+<script>
+$(function(){
+	$(".home").attr("src", "images/home_uh.png");
+	$(".myorder").attr("src", "images/order_is.png");
+	$(".mycount").attr("src", "images/my_un.png");
+	$(".help").attr("src", "images/help_un.png");
+	
+	var a=localStorage.getItem('OL_aid');
+	if(a!=null){
+		$(a).click();
+		$(a.replace('#',".")).addClass('OL-li-active');
+		localStorage.removeItem('OL_aid');
+	}else{
+		$('.OL_a1').addClass('OL-li-active');
+	}
+	
+	for(var i=0;i<$(".status").length;i++){
+		var b = $(".status").eq(i).children().eq(1).text();
+		if(b=="已收货"){
+			$(".OL_ca_f").eq(i).show();
+		}else{
+			$('.OL_ca_f').eq(i).hide();
+		}
+	}
+	
+});
+
+</script>
+
+<div id="header" data-role = "header" data-position = "fixed" data-tap-toggle="false">
+	<div class="left_icon"><a><img class="left_icon_image" src = "images/back.png"/></a></div>
+	<div class="header_input">
+		<span class="shopdt_title">我的订单</span>
+	</div>
+</div>
+
+
+        
+<div data-role="content" class="content">
+	<div id="order_list_nav">
+		<ul class="clearfix">
+			<li><div id="OL_a1" class="OL_a1"><span>待审核</span></div></li>
+			<li><div id="OL_a2" class="OL_a2"><span>待支付</span></div></li>
+			<li><div id="OL_a3" class="OL_a3"><span>待备货</span></div></li>
+			<li><div id="OL_a4" class="OL_a4"><span>待收货</span></div></li>
+			<li><div id="OL_a5" class="OL_a5"><span>待退款</span></div></li>
+			<li style="border-right:0!important"><div id="OL_a6" class="OL_a6"><span>已结束</span></div></li>
+		</ul>
+	</div>
+	<div id="OL_page_list">
+		<div id="OL_page1">
+		<%for(i=0;i<data.length;i++){%>
+		<%
+		var item=data[i].items;
+		if(typeof(item)=="string"){
+		item=JSON.parse(item);
+		}
+		if(data[i].orderStatus!="ORDER_CREATED"){continue;}%>
+			<div class="fov_float_left clearfix" id="<%=data[i].orderNo%>">
+	        	<div><img src="images/commodity/commodity_1.jpg" class="fov_product_photo"/></div>
+	            <div class="order_msg_box">
+	            	<ul>
+	            		<li><span class="color_des"><%=data[i].orderNo%></span><span class="color_title"><%=item[0].goodsName%>…</span></li>
+		            	<li><span class="color_shop"><%=data[i].shopName%></span><span class="CL_total">总计：</span><span class="newprice"><span class="yang">￥</span><%=data[i].totalAmount%></span></li> 
+		           		<li><span class="color_att">时间：</span><span class="color_des">2014-12-8</span></li>
+		            </ul>
+		            <div class="to_cancel OL_ca">取消</div><div class="to_change OL_ch">更改</div>
+	            </div>
+	            <div class="fov_btn_right"><img src="images/Arrow-2.png"/></div>
+	        </div>
+
+	   <%}%>     
+
+	        <div class="fov_float_left clearfix">
+	        	<div><img src="images/commodity/commodity_2.jpg" class="fov_product_photo"/></div>
+	            <div class="order_msg_box">
+	            	<ul>
+	            		<li><span class="color_des">100000</span><span class="color_title">新鲜水果、顶级美味点…</span></li>
+		            	<li><span class="color_shop">大青椒商铺</span><span class="CL_total">总计：</span><span class="newprice"><span class="yang">￥</span>3.20</span></li> 
+		            	<li><span class="color_att">时间：</span><span class="color_des">2014-12-8</span></li>
+		            </ul>
+		            <div class="to_cancel OL_ca">取消</div><div class="to_change OL_ch">更改</div>
+	            </div>
+	            <div class="fov_btn_right"><img src="images/Arrow-2.png"/></div>
+	        </div>
+	        <div class="fov_float_left clearfix">
+	        	<div><img src="images/commodity/commodity_3.jpg" class="fov_product_photo"/></div>
+	            <div class="order_msg_box">
+	            	<ul>
+	            		<li><span class="color_des">100000</span><span class="color_title">上好的顶级山竹、美味…</span></li>
+		            	<li><span class="color_shop">大青椒商铺</span><span class="CL_total">总计：</span><span class="newprice"><span class="yang">￥</span>3.20</span></li> 
+		            	<li><span class="color_att">时间：</span><span class="color_des">2014-12-8</span></li>
+		            </ul>
+		            <div class="to_cancel OL_ca">取消</div><div class="to_change OL_ch">更改</div>
+	            </div>
+	            <div class="fov_btn_right"><img src="images/Arrow-2.png"/></div>
+	        </div>
+
+		</div>
+		<div id="OL_page2" style="display:none">
+			<div class="fov_float_left clearfix" id="no1">
+	        	<div><img src="images/commodity/commodity_1.jpg" class="fov_product_photo"/></div>
+	            <div class="order_msg_box">
+	            	<ul>
+	            		<li><span class="color_des">100000</span><span class="color_title">上好的顶级泡菜、新鲜…</span></li>
+		            	<li><span class="color_shop">大青椒商铺</span><span class="CL_total">总计：</span><span class="newprice"><span class="yang">￥</span>3.20</span></li> 
+		           		<li><span class="color_att">时间：</span><span class="color_des">2014-12-8</span></li>
+		            </ul>
+		            <div class="go_to_pay OL_pa btn_s">支付</div><div class="to_change OL_ch btn_s">更改</div><div class="to_cancel OL_ca btn_s">取消</div>
+	            </div>
+	            <div class="fov_btn_right"><img src="images/Arrow-2.png"/></div>
+	        </div>
+	        <div class="fov_float_left clearfix" id="no2">
+	        	<div><img src="images/commodity/commodity_2.jpg" class="fov_product_photo"/></div>
+	            <div class="order_msg_box">
+	            	<ul>
+	            		<li><span class="color_des">100000</span><span class="color_title">新鲜水果、顶级美味点…</span></li>
+		            	<li><span class="color_shop">大青椒商铺</span><span class="CL_total">总计：</span><span class="newprice"><span class="yang">￥</span>3.20</span></li> 
+		           		<li><span class="color_att">时间：</span><span class="color_des">2014-12-8</span></li>
+		            </ul>
+		            <div class="go_to_pay OL_pa btn_s">支付</div><div class="to_change OL_ch btn_s">更改</div><div class="to_cancel OL_ca btn_s">取消</div>
+	            </div>
+	            <div class="fov_btn_right"><img src="images/Arrow-2.png"/></div>
+	        </div>
+	        <div class="fov_float_left clearfix" id="no3">
+	        	<div><img src="images/commodity/commodity_2.jpg" class="fov_product_photo"/></div>
+	            <div class="order_msg_box">
+	            	<ul>
+	            		<li><span class="color_des">100000</span><span class="color_title">新鲜水果、顶级美味点…</span></li>
+		            	<li><span class="color_shop">大青椒商铺</span><span class="CL_total">总计：</span><span class="newprice"><span class="yang">￥</span>3.20</span></li> 
+		            	<li><span class="color_att">时间：</span><span class="color_des">2014-12-8</span></li>
+		            </ul>
+		            <div class="go_to_pay OL_pa btn_s">支付</div><div class="to_change OL_ch btn_s">更改</div><div class="to_cancel OL_ca btn_s">取消</div>
+	            </div>
+	            <div class="fov_btn_right"><img src="images/Arrow-2.png"/></div>
+	        </div>
+		</div>
+		<div id="OL_page3" style="display:none">
+			<div class="fov_float_left clearfix">
+	        	<div><img src="images/commodity/commodity_1.jpg" class="fov_product_photo"/></div>
+	            <div class="order_msg_box">
+	            	<ul>
+	            		<li><span class="color_des">100000</span><span class="color_title">上好的顶级泡菜、新鲜…</span></li>
+		            	<li><span class="color_shop">大青椒商铺</span><span class="CL_total">总计：</span><span class="newprice"><span class="yang">￥</span>3.20</span></li> 
+	            		<li><span class="color_att">时间：</span><span class="color_des">2014-12-8</span></li>
+	            	</ul>
+	            	<div class="to_cancel OL_ca">取消</div>
+	            </div>
+	            <div class="fov_btn_right"><img src="images/Arrow-2.png"/></div>
+	        </div>
+	        <div class="fov_float_left clearfix">
+	        	<div><img src="images/commodity/commodity_2.jpg" class="fov_product_photo"/></div>
+	            <div class="order_msg_box">
+	            	<ul>
+	            		<li><span class="color_des">100000</span><span class="color_title">上好的顶级泡菜、新鲜…</span></li>
+		            	<li><span class="color_shop">大青椒商铺</span><span class="CL_total">总计：</span><span class="newprice"><span class="yang">￥</span>3.20</span></li> 
+	            		<li><span class="color_att">时间：</span><span class="color_des">2014-12-8</span></li>
+	            	</ul>
+	            	<div class="to_cancel OL_ca">取消</div>
+	            </div>
+	            <div class="fov_btn_right"><img src="images/Arrow-2.png"/></div>
+	        </div>
+	        <div class="fov_float_left clearfix">
+	        	<div><img src="images/commodity/commodity_3.jpg" class="fov_product_photo"/></div>
+	            <div class="order_msg_box">
+	            	<ul>
+	            		<li><span class="color_des">100000</span><span class="color_title">上好的顶级泡菜、新鲜…</span></li>
+		            	<li><span class="color_shop">大青椒商铺</span><span class="CL_total">总计：</span><span class="newprice"><span class="yang">￥</span>3.20</span></li> 
+	            		<li><span class="color_att">时间：</span><span class="color_des">2014-12-8</span></li>
+	            	</ul>
+	            	<div class="to_cancel OL_ca">取消</div>
+	            </div>
+	            <div class="fov_btn_right"><img src="images/Arrow-2.png"/></div>
+	        </div>
+		</div>
+		<div id="OL_page4" style="display:none">
+			<div class="fov_float_left clearfix">
+	        	<div><img src="images/commodity/commodity_1.jpg" class="fov_product_photo"/></div>
+	            <div class="order_msg_box">
+	            	<ul>
+	            		<li><span class="color_des">100000</span><span class="color_title">上好的顶级泡菜、新鲜…</span></li>
+		            	<li><span class="color_shop">大青椒商铺</span><span class="CL_total">总计：</span><span class="newprice"><span class="yang">￥</span>3.20</span></li> 
+		            	<li><span class="color_att">时间：</span><span class="color_des">2014-12-8</span></li>
+		            </ul>
+		            <div class="to_cancel OL_ca">取消</div><div class="sureshouh OL_pa">确认收货</div>
+	            </div>
+	            <div class="fov_btn_right"><img src="images/Arrow-2.png"/></div>
+	        </div>
+	        <div class="fov_float_left clearfix">
+	        	<div><img src="images/commodity/commodity_2.jpg" class="fov_product_photo"/></div>
+	            <div class="order_msg_box">
+	            	<ul>
+	            		<li><span class="color_des">100000</span><span class="color_title">新鲜水果、顶级美味点…</span></li>
+		            	<li><span class="color_shop">大青椒商铺</span><span class="CL_total">总计：</span><span class="newprice"><span class="yang">￥</span>3.20</span></li> 
+		            	<li><span class="color_att">时间：</span><span class="color_des">2014-12-8</span></li>
+		            </ul>
+		            <div class="to_cancel OL_ca">取消</div><div class="sureshouh OL_pa">确认收货</div>
+	            </div>
+	            <div class="fov_btn_right"><img src="images/Arrow-2.png"/></div>
+	        </div>
+		</div>
+		<div id="OL_page5" style="display:none">
+			<div class="fov_float_left clearfix">
+	        	<div><img src="images/commodity/commodity_1.jpg" class="fov_product_photo"/></div>
+	            <div class="order_msg_box">
+	            	<ul>
+	            		<li><span class="color_des">100000</span><span class="color_title">上好的顶级泡菜、新鲜…</span></li>
+		            	<li><span class="color_shop">大青椒商铺</span><span class="CL_total">总计：</span><span class="newprice"><span class="yang">￥</span>3.20</span></li> 
+	            		<li><span class="color_att">时间：</span><span class="color_des">2014-11-11</span></li>
+	            	</ul>	
+	            </div>
+	            <div class="fov_btn_right"><img src="images/Arrow-2.png"/></div>
+	        </div>
+	        <div class="fov_float_left clearfix">
+	        	<div><img src="images/commodity/commodity_2.jpg" class="fov_product_photo"/></div>
+	            <div class="order_msg_box">
+	            	<ul>
+	            		<li><span class="color_des">100000</span><span class="color_title">新鲜水果、顶级美味点…</span></li>
+		            	<li><span class="color_shop">大青椒商铺</span><span class="CL_total">总计：</span><span class="newprice"><span class="yang">￥</span>3.20</span></li> 
+	            		<li><span class="color_att">时间：</span><span class="color_des">2014-11-11</span></li>
+	            	</ul>
+	            </div>
+	            <div class="fov_btn_right"><img src="images/Arrow-2.png"/></div>
+	        </div>
+		</div>
+		<div id="OL_page6" style="display:none">
+		<%for(i=0;i<data.length;i++){%>
+		<%
+		var items=data[i].items;
+		if(typeof(items)=="string"){
+		items=JSON.parse(items);
+		}
+		if(data[i].orderStatus!="ORDER_CANCELLED"){continue;}%>
+			<div class="fov_float_left clearfix">
+	        	<div><img src="images/commodity/commodity_1.jpg" class="fov_product_photo"/></div>
+	            <div class="order_msg_box">
+	            	<ul>
+	            		<li><span class="color_des"><%=data[i].orderNo%></span><span class="color_title"><%=items[0].goodsName%>…</span></li>
+		            	<li><span class="color_shop"><%=data[i].shopName%></span><span class="CL_total">总计：</span><span class="newprice"><span class="yang">￥</span><%=data[i].totalAmount%></span></li> 
+	            		<li class="status"><span class="color_att">状态：</span><span class="color_des">已收货</span></li>
+	            	</ul>	
+	            	<div class="OL_ca_f">申请退货</div><div class="OL_ch_f">评价</div>
+	            </div>
+	            <div class="fov_btn_right"><img src="images/Arrow-2.png"/></div>
+	        </div>
+
+
+	     <%}%>  
+
+
+	        <div class="fov_float_left clearfix">
+	        	<div><img src="images/commodity/commodity_2.jpg" class="fov_product_photo"/></div>
+	            <div class="order_msg_box" >
+	            	<ul>
+	            		<li><span class="color_des">100000</span><span class="color_title">新鲜水果、顶级美味点…</span></li>
+		            	<li><span class="color_shop">大青椒商铺</span><span class="CL_total">总计：</span><span class="newprice"><span class="yang">￥</span>3.20</span></li> 
+	            		<li class="status"><span class="color_att">状态：</span><span class="color_des">已取消</span></li>
+	            	</ul>
+	            	<div class="OL_ca_f">申请退货</div><div class="OL_ch_f">评价</div>
+	            </div>
+	            <div class="fov_btn_right"><img src="images/Arrow-2.png"/></div>
+	        </div>
+
+	        <div class="fov_float_left clearfix">
+	        	<div><img src="images/commodity/commodity_2.jpg" class="fov_product_photo"/></div>
+	            <div class="order_msg_box" >
+	            	<ul>
+	            		<li><span class="color_des">100000</span><span class="color_title">新鲜水果、顶级美味点…</span></li>
+		            	<li><span class="color_shop">大青椒商铺</span><span class="CL_total">总计：</span><span class="newprice"><span class="yang">￥</span>3.20</span></li> 
+	            		<li class="status"><span class="color_att">状态：</span><span class="color_des">已退款</span></li>
+	            	</ul>
+	            	<div class="OL_ca_f">申请退货</div><div class="OL_ch_f">评价</div>
+	            </div>
+	            <div class="fov_btn_right"><img src="images/Arrow-2.png"/></div>
+	        </div>
+		</div>
+	</div>
+	
+</div>
+ <script type="text/javascript" src="js/libs/headerinput.js"></script>

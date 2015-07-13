@@ -1,0 +1,22 @@
+ <!--二级菜单 writen by csw-->
+<div id="header" data-role = "header" data-position = "fixed"data-tap-toggle="false">
+	<div class="left_icon"><a><img class="left_icon_image" src = "images/back.png"/></a></div>
+	<div class="header_input">
+		<span id="sc_menu" class="shopdt_title">商品分类</span>
+	</div>
+</div>
+
+<div data-role="content" class="content">
+	<!--商品分类，初始被隐藏-->
+	<div id="dis_sele" class="clearfix">
+		<!--农机-->
+		<div id="farm_sele">
+			<%for(var i=0;i<data.length;i++){%>
+			<div><%=data[i].categoryDesc%><div class="dis_img"></div></div>
+			<input type="hidden" value="<%=data[i].categoryId%>">
+			<%}%>
+		</div>
+	</div>
+
+</div> 
+	

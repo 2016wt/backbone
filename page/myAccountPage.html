@@ -1,0 +1,174 @@
+<!-- 我的账户 -->
+<script>
+		$(".home").attr("src", "images/home_uh.png");
+		$(".myorder").attr("src", "images/order_un.png");
+		$(".mycount").attr("src", "images/my_is.png");
+		$(".help").attr("src", "images/help_un.png");
+	//交替换色
+	$(function(){
+		$('.table_style_one tr:odd').attr('style','background-color:#EAEAEA');
+		$('.table_style_two tr:odd').attr('style','background-color:#EAEAEA');
+		$('.table_style_three tr:odd').attr('style','background-color:#EAEAEA');
+		$('.myC_a1').addClass('ui-btn-active');
+	});	
+</script>
+<style>
+.ui-content{
+	padding: 0px;
+}
+.ui-tabs {
+    position: relative;
+    padding: 0px;
+}
+.ui-page-theme-a a{
+	font-weight: inherit;	
+}
+
+.ui-page-theme-a .ui-btn .ui-btn-active{
+	border: 0;	
+}  
+.ui-page-theme-a .ui-btn {
+	color:#50A625 !important;
+}
+.ui-navbar .ui-btn {
+	box-shadow:none!important;
+	border:0!important;
+	
+}
+
+#ul_div .ui-btn{
+	background-color:#EAEAEA !important;
+}	
+#ul_div .ui-btn-active{
+	background-color: #FFF !important;
+	color: black!important;
+}
+
+</style>
+
+
+<!-- 加载头部样式 -->
+<div id="header" data-role = "header" data-position = "fixed"data-tap-toggle="false">
+	<div class="left_icon"><a><img class="left_icon_image" src = "images/back.png"/></a></div>
+	<div class="header_input">
+		<span class="shopdt_title">我的账户</span>
+	</div>
+</div>
+		
+<div data-role="content" class="content">
+<input type="hidden" id="myacount_flag">
+	<div  data-role="tabs" >
+	  <div data-role="navbar" id="ul_div">
+	    <ul>
+	      <li class="image1"><a class="myC_a1" href="#one" data-ajax="false"><div><img class="image_1" src="images/m-1.png"/><span>会员账户</span></div></a></li>
+	      <li class="image3"><a href="#three" data-ajax="false"><div><img class="image_3"  src="images/m-3-2.png"/><span style="margin-left: 2px;">信用卡账户</span></div></a></li>
+	      <li class="image4"><a href="#four" data-ajax="false"><div><img class="image_4"  src="images/m-4-2.png"/><span>手机账户</span></div></a></li>
+	    </ul>
+	  </div>
+	  <div id="one" class="ui-body-d ui-content">
+	   <table class="table_style_one" cellspacing="0" cellpadding="0">
+			<tr>
+				<td id="table_line_size"class="table_td"><span id="span_1">会员号</span></td>
+				<td id="table_line_size" ><span id="span_2">1945645789@qq.com</span></td>
+			</tr>
+			<tr>
+				<td id="table_line_size"class="table_td"><span id="span_1">姓名</span></td>
+				<td id="table_line_size"><span id="span_2">王强</span></td>
+			</tr>
+			<tr>
+				<td id="table_line_size"  class="table_td"><span id="span_1">身份证</span></td>
+				<td id="table_line_size" ><span id="span_2">1234567878901234556</span></td>
+			</tr>
+			<tr>
+				<td id="table_line_size"  class="table_td"><span id="span_1">地址</span></td>
+				<td id="table_line_size" ><span id="span_2">店铺店铺店铺</span></td>
+			</tr>
+			<tr>
+				<td id="table_line_size"  class="table_td"><span id="span_1">手机</span></td>
+				<td id="table_line_size" ><span id="span_2">15000000000</span></td>
+			</tr>			
+		</table>
+	  </div>
+	  <div id="three" class="ui-body-d ui-content">
+	   <table class="table_style_two" cellspacing="0" cellpadding="0">
+			<tr>
+				<td id="table_line_size"class="table_td"><span id="span_1">开户银行</span></td>
+				<td id="table_line_size"><span id="span_2">中国银行</span></td>
+			</tr>
+			<tr>
+				<td id="table_line_size"  class="table_td"><span id="span_1">信用卡账号</span></td>
+				<td id="table_line_size" ><span id="span_2">6548654648945645</span></td>
+			</tr>
+			<tr>
+				<td id="table_line_size"  class="table_td"><span id="span_1">信用卡额度</span></td>
+				<td id="table_line_size" ><span id="span_2">5000.00</span></td>
+			</tr>
+			<tr>
+				<td id="table_line_size"  class="table_td"><span id="span_1">账单日期</span></td>
+				<td id="table_line_size" ><span id="span_2">2014-12- 3</span></td>
+			</tr>
+			<tr>
+				<td id="table_line_size"  class="table_td"><span id="span_1">还款日期</span></td>
+				<td id="table_line_size" ><span id="span_2">2015- 3-15</span></td>
+			</tr>
+			<tr>
+				<td id="table_line_size"  class="table_td"><span id="span_1">推荐人姓名</span></td>
+				<td id="table_line_size" ><span id="span_2">张三疯</span></td>
+			</tr>
+			<tr>
+				<td id="table_line_size"  class="table_td"><span id="span_1">推荐人身份证号</span></td>
+				<td id="table_line_size" ><span id="span_2">6565894885254866588</span></td>
+			</tr>
+			<tr>
+				<td id="table_line_size"  class="table_td"><span id="span_1">推荐人地址</span></td>
+				<td id="table_line_size" ><span id="span_2">毛线沟镇毛线沟乡</span></td>
+			</tr>	
+			<tr>
+				<td id="table_line_size"  class="table_td"><span id="span_1">推荐人手机号</span></td>
+				<td id="table_line_size" ><span id="span_2">1305545665</span></td>
+			</tr>	
+			<tr>
+				<td id="table_line_size"  class="table_td"><span id="span_1">推荐人工作单位</span></td>
+				<td id="table_line_size" ><span id="span_2">辽宁省大连市毛线乡毛线沟</span></td>
+			</tr>			
+		</table>
+	  </div>
+	  <div id="four" class="ui-body-d ui-content">
+	   <table class="table_style_three" cellspacing="0" cellpadding="0">
+			<tr>
+				<td id="table_line_size"class="table_td"><span id="span_1">手机型号</span></td>
+				<td id="table_line_size"><span id="span_2">ZTE&nbsp;Q301C</span></td>
+			</tr>
+			<tr>
+				<td id="table_line_size"  class="table_td"><span id="span_1">手机序列号</span></td>
+				<td id="table_line_size" ><span id="span_2">45625648216975359</span></td>
+			</tr>
+			<tr>
+				<td id="table_line_size"  class="table_td"><span id="span_1">手机号码</span></td>
+				<td id="table_line_size" ><span id="span_2">15896555454</span></td>
+			</tr>
+			<tr>
+				<td id="table_line_size"  class="table_td"><span id="span_1">SIM卡</span></td>
+				<td id="table_line_size" ><span id="span_2">15456865454</span></td>
+			</tr>			
+		</table>
+	  </div>
+	</div>
+</div>
+<script type="text/javascript" src="js/libs/headerinput.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

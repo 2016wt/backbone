@@ -1,0 +1,112 @@
+body,ul,li {
+	padding:0;
+	margin:0;
+	border:0;
+}
+
+body {
+	
+	font-size:12px;
+	-webkit-user-select:none;
+    -webkit-text-size-adjust:none;
+}
+
+#header {
+	height: 50px;
+	background:#83c75d;
+	font-size: 20px;
+}
+
+#header a {
+	color:#f3f3f3;
+	text-decoration:none;
+	font-weight:bold;
+	text-shadow:0 -1px 0 rgba(0,0,0,0.5);
+}
+#hd {
+	position: absolute;
+	z-index: 2;
+	top: 0px;
+	left: 1px;
+	width: 100%;
+	height:45px;
+	line-height:45px;
+	background-color: #3ADA46;
+	padding: 0;
+	font-size: 20px;
+	text-align: center;
+	}
+	
+#ct {
+	position: absolute;
+	top: 45px;
+	left: 1px;
+	width: 100%;
+	height:80px;
+	line-height: 100px;
+	}
+
+	
+#side {
+	height: 0px; 
+	width: 10%; 
+	margin-left: 30px; 
+	float: left; 
+	}
+	
+#main { 
+	height: 80px; 
+	width: 65%; 
+	margin-left:25%; 
+	}
+
+
+#footer {
+	height:60px;
+	background:#83c75d;
+}
+
+
+#wrapper {
+	position:absolute; z-index:1;
+	top:45px; bottom:48px; left:-9999px;
+	width:100%;
+	background:#aaa;
+	overflow:auto;
+}
+
+
+#scroller {
+	position:absolute; z-index:1;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	width:100%;
+	padding:0;
+}
+
+#scroller ul {
+	list-style:none;
+	padding:0;
+	margin:0;
+	width:100%;
+	text-align:left;
+}
+
+#scroller li {
+	padding:0 10px;
+	height:100px;
+	line-height:100px;
+	border-bottom:0px solid #ccc;
+	border-top:1px solid #fff;
+	background-color:#fafafa;
+	font-size:14px;
+}
+
+#myFrame {
+	position:absolute;
+	top:0; left:0;
+}
+.cshop_li_img{
+	border-top:1px solid #dfddd8;
+}
+
+

@@ -1,0 +1,208 @@
+/* Android ICS skin */
+.android-ics .dw {
+    padding: 0;
+}
+.android-ics .dw .dwwc,
+.android-ics .dw .dwwl,
+.android-ics .dw .dww,
+.android-ics .dw .dwb,
+.android-ics .dw .dwpm .dww {
+}
+.android-ics .dwwr {
+    padding: 0;
+    background: none repeat scroll 0% 0% rgba(231, 222, 231, 1);
+}
+.android-ics .dwc {
+    margin: 0;
+    padding: 30px 10px 1px 10px;
+}
+.android-ics .dwhl {
+    padding: 1px 10px;
+}
+.android-ics .dwv {
+    height: 36px;
+    line-height: 36px;
+    padding: 0;
+    border-bottom: 1px solid rgba(185, 182, 182, 1);;
+    font-size: 18px;
+    color:#50A524;
+}
+.android-ics .dwwl {
+    margin: 0 2px;
+}
+.android-ics .dww,
+.android-ics .dw .dwpm .dwwl,
+.android-ics .dw .dwpm .dww {
+    border: 0;
+}
+.android-ics .dww .dw-li {
+    color: #787878;
+    font-size: 18px;
+    text-shadow: none;
+}
+
+.android-ics .dw .dwwb {
+   
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+.android-ics .dwwb span {
+    display: none;
+}
+.android-ics .dwwb:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -8px;
+    margin-left: -8px;
+    color: #7e7e7e;
+    width: 0;
+    height: 0;
+    border-width: 8px;
+    border-style: solid;
+    content: '';
+}
+.android-ics .dwwbm {
+    top: 0;
+    bottom: auto;
+}
+.android-ics .dwwbp {
+    bottom: 0;
+    top: auto;
+}
+.android-ics .dwwbm:after {
+    border-color: transparent transparent #7e7e7e transparent;
+}
+.android-ics .dwwbp:after {
+    border-color: #7e7e7e transparent transparent transparent;
+}
+.android-ics .dw .dwwl .dwb-a {
+}
+.android-ics .dwwbm.dwb-a:after {
+    border-color: transparent transparent #319abd transparent;
+}
+.android-ics .dwwbp.dwb-a:after {
+    border-color: #319abd transparent transparent transparent;
+}
+.android-ics .dw .dwwol {
+    width: 60%;
+    left: 20%;
+    height: 36px;
+   border:0;
+    margin-top: -15px;
+    display: block;
+    width: 72px;
+	height: 30px;
+	margin-left: -14px;
+	background-color:rgba(191, 191, 183, 1);
+}
+.android-ics .dwbc {
+    border-top: 0;
+    padding: 0;
+    height:45px;
+}
+.android-ics .dw .dwb {
+    height: 36px;
+    line-height: 36px;
+    padding: 0;
+    margin: 0;
+    font-weight: 100;
+    text-shadow: none;
+    box-shadow: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -webkit-box-shadow: none;
+}
+.android-ics .dw .dwb-a {
+background-color:
+}
+.android-ics .dwb-s .dwb, .android-ics .dwb-n .dwb {
+    border-right: 0;
+}
+/* Docked */
+.android-ics.dw-bottom .dw, .android-ics.dw-top .dw {
+    border-radius: 0;
+    -webkit-border-radius: 0;
+}
+/* Multiple select */
+.android-ics .dwwms .dwwol {
+    display: none;
+}
+.android-ics .dwwms .dw-li {
+    padding-left: 5px;
+    padding-right: 36px;
+}
+.android-ics .dwwms .dw-li:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: auto;
+    right: 10px;
+    width: 14px;
+    height: 14px;
+    margin-top: -9px;
+    line-height: 14px;
+    border: 1px solid #424542;
+}
+.android-ics .dwwms .dw-msel:after {
+    content: '✔';
+}
+/* Light version */
+.android-ics.light .dw {
+}
+.android-ics.light .dww .dw-li {
+}
+.android-ics .dwwo {
+    background: none;
+}
+.android-ics.light .dwwo {
+}
+.android-ics.light .dw .dwwb {
+    color: #f5f5f5;
+}
+.android-ics.light .dwbc {
+    border-top: 1px solid #dbdbdb;
+}
+.android-ics.light .dwb {
+}
+.android-ics.light .dwb-a {
+}
+.android-ics.light .dwb-s .dwb, .android-ics.light .dwb-n .dwb {
+    border-right: 1px solid #dbdbdb;
+}
+/* Bubble positioning */
+.android-ics .dw-bubble-bottom .dw-arr {
+    border-color: transparent transparent #292829 transparent;
+}
+.android-ics .dw-bubble-top .dw-arr {
+    border-color: #292829 transparent transparent transparent;
+}
+/* Bubble positioning */
+.android-ics.light .dw-bubble-bottom .dw-arr {
+    border-color: transparent transparent #f5f5f5 transparent;
+}
+.android-ics.light .dw-bubble-top .dw-arr {
+    border-color: #f5f5f5 transparent transparent transparent;
+}
+/* Multiple select */
+.android-ics.light .dwwms .dw-li:after {
+}
+span.dwbw:nth-child(1){
+background-color: #FAAE25;
+color: #FFF;
+float: right;
+width:48%;
+margin-right: 5%;
+}
+span.dwbw:nth-child(2){
+background-color: rgba(191, 191, 183, 1);
+color: #50A524;
+width: 40%;
+margin-left: 5%;
+}
+.dwb-s .dwb-a{
+background-color:#FAAE25!important;
+} 
+.dwb-c .dwb-a{
+background-color:rgba(191, 191, 183, 1)!important;
+}  

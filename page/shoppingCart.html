@@ -1,0 +1,168 @@
+<!--购物车-->
+<style>
+ul li{
+		list-style:none;
+		display:inline;
+		float:left;
+}
+	
+.ui-page-theme-a{
+	background-color:white!important;
+}
+</style>
+<script>
+	$(function(){
+		$(".home").attr("src", "images/home_uh.png");
+		$(".myorder").attr("src", "images/order_un.png");
+		$(".mycount").attr("src", "images/my_un.png");
+		$(".help").attr("src", "images/help_un.png");
+		$(".spc").attr("src","images/shoppingCart_is.png");
+		$(".SC_delete").on("vmousedown",function(){
+			$(this).attr('src','images/delete-2.png');
+		});
+		$(".SC_delete").on("vmouseup",function(){
+			$(this).attr('src','images/delete.png');
+		});
+		$(".SC_plus").on("vmousedown",function(){
+			$(this).attr('src','images/plus-2.png');
+		});
+		$(".SC_plus").on("vmouseup",function(){
+			$(this).attr('src','images/plus.png');
+		});
+		 $(".SC_minus").on("vmousedown",function(){
+			$(this).attr('src','images/minus-2.png');
+		});
+		 $(".SC_minus").on("vmouseup",function(){
+			$(this).attr('src','images/minus.png');
+		});
+	});
+</script>
+<div id="header" data-role = "header" data-position = "fixed"data-tap-toggle="false">
+	<div class="left_icon"><a><img class="left_icon_image" src = "images/back.png"/></a></div>
+	<div class="header_input">
+		<span class="shopdt_title">我的购物车</span>
+	</div>
+</div>
+
+        
+<div data-role="content" style="padding:0" class="content" id="SC_Cont">
+	<div style="background-color:#edecec;height:97px;border-bottom:1px solid rgba(216, 203, 203, 1); " id="shop1">
+		<div>
+		<ul>
+		<li><img src="images/shop/shop_1.jpg" style="width: 75px; height: 60px;margin:10px 10px 0 10px"/></li>
+		<li style="width: 30%;line-height: 1.6em;margin-top: 10px;"><span class="color_shop" style="font-size:1em;">大叔青椒商铺</span><br><span  class="color_add" style="font-size:0.8em;">辽宁省 大连市...</span><br><div class="gotobuy" id="move_to" style="background-color:#faae25;font-size:1.2em;text-align:center;margin-top:0.5em;width:100%;max-width:130px;color:#fff;height: 32px;line-height:33px">购买</div></li>
+		<li style="width: 28%;margin-top: 20px;"><span style="font-size:1em;color:#323232;padding-left: 0.2em;">共计:</span><span style="font-size:1.3em;color:#ff9d00"><span style="font-size:0.6em">￥</span>320.00</span><div class="gotoorder" id="to_buy" style="background-color:#50a625;font-size:1.2em;text-align:center;line-height: 33px;height: 32px;margin: 1.1em 0px 0px 0.5em;color:#fff;width:100%;max-width:130px;">预订</div></li>
+		<li style="margin:40px 10px 0 0;float:right"><img src="images/Arrow-1.png" style="width:16px;float:right"></li>
+		</ul>
+		</div>
+	</div>
+
+	<div style="background-color:white;" class="shop1" >
+	<table style="margin: 5px 0px 5px 8px;">
+	<tr>
+	<td rowspan="3" style="padding-right: 0.4em;">
+	<img src="images/commodity/commodity_1.jpg" style="width: 90px;height:73px;"/>
+	</td>
+	<td>
+	<div style="margin-top: 0.1em;"><span style="background-color:#faae25;padding: 0.2em 0.5em 0em 0.5em;color:#fff;font-size:0.6em">促销</span><span class="color_title" style="padding-left:0.5em;font-size:0.75em">[买一斤送一斤]上好的顶级青椒</span></div>
+	</td>
+	</tr>
+	<tr>
+	<td style="width:100%">
+	<div>
+	<span style="font-size:0.6em;color:#ff9d00">￥</span><span style="color:#ff9d00;font-size:1em;padding-right:0.4em">3.2</span><span style="text-decoration: line-through;color:#bdbdbd;font-size:0.8em;"><span style="font-size:0.6em;">￥</span>6.78</span>
+		<img src="images/plus.png" style="width:18px;padding:0 0.4em 0 3%;" class="SC_plus"><span style="font-size:1em;color:#323232">1</span><span style="font-size:0.6em;color:#323232">斤</span><img src="images/minus.png" class="SC_minus" style="width:18px;padding-left: 0.4em;">
+		<img src="images/Arrow-2.png" style="width:16px;float:right;margin: 0.5em 0.5em -10px 0px;">
+	</div>
+	</td>
+	</tr>
+	<tr>
+	<td>
+	
+	<div class="gotofavorite" style="background-color:#d0d0d0;font-size:0.8em;text-align:center;color:#50a625;width: 110px;display: inline-block;margin-top: 0.2em;padding:  0.65em 0.6em;">移到收藏夹</div>
+	<img src="images/delete.png" style="width:35px;float:right;margin-right: 15%;" class="SC_delete">
+	
+	</td>
+	</tr>
+	</table>
+	<img src="images/line.png" style="height:3px;width: 100%;"/>
+	</div>
+	
+	<div style="background-color:white;border-bottom:1px solid rgba(216, 203, 203, 1);" class="shop1">
+	<table style="margin: 5px 0px 5px 8px;">
+	<tr>
+	<td rowspan="3" style="padding-right: 0.4em;">
+	<img src="images/commodity/commodity_2.jpg" style="width: 90px;height:73px;"/>
+	</td>
+	<td>
+	<div style="margin-top: 0.1em;"><span style="background-color:#faae25;padding: 0.2em 0.5em 0em 0.5em;color:#fff;font-size:0.6em">促销</span><span class="color_title" style="padding-left:0.5em;font-size:0.75em">[买一斤送一斤]上好的顶级青椒</span></div>
+	</td>
+	</tr>
+	<tr>
+	<td style="width:100%">
+	<div>
+	<span style="font-size:0.6em;color:#ff9d00">￥</span><span style="color:#ff9d00;font-size:1em;padding-right:0.4em">3.2</span><span style="text-decoration: line-through;color:#bdbdbd;font-size:0.8em;"><span style="font-size:0.6em;">￥</span>6.78</span>
+		<img src="images/plus.png" style="width:18px;padding:0 0.4em 0 3%;" class="SC_plus"><span style="font-size:1em;color:#323232">1</span><span style="font-size:0.6em;color:#323232">斤</span><img src="images/minus.png" style="width:18px;padding-left: 0.4em;" class="SC_minus">
+		<img src="images/Arrow-2.png" style="width:16px;float:right;margin: 0.5em 0.5em -10px 0px;">
+	</div>
+	</td>
+	</tr>
+	<tr>
+	<td>
+	
+	<div class="gotofavorite" style="background-color:#d0d0d0;font-size:0.8em;text-align:center;color:#50a625;width: 110px;display: inline-block;margin-top: 0.2em;padding: 0.65em 0.6em;">移到收藏夹</div>
+	<img src="images/delete.png" style="width:35px;float:right;margin-right: 15%;" class="SC_delete">
+	
+	</td>
+	</tr>
+	</table>
+	</div>
+	
+	<div style="background-color:#edecec;height:97px;border-bottom:1px solid rgba(216, 203, 203, 1);" id="shop2">
+	<div>
+	<ul>
+
+	<li><img src="images/shop/shop_2.jpg" style="width: 75px; height: 60px;margin:10px 10px 0 10px"/></li>
+	<li style="width: 30%;line-height: 1.6em;margin-top: 10px;"><span class="color_shop" style="font-size:1em;">新鲜蔬菜铺</span><br><span style="font-size:0.8em;color:#787878">辽宁省 大连市...</span><br><div class="gotobuy" style="background-color:#faae25;font-size:1.2em;text-align:center;margin-top:0.5em;width:100%;max-width:130px;color:#fff;height: 32px;line-height:33px">购买</div></li>
+
+	<li style="width: 28%;margin-top: 20px;"><span style="font-size:1em;color:#323232;padding-left: 0.2em;">共计:</span><span style="font-size:1.3em;color:#ff9d00"><span style="font-size:0.6em">￥</span>320.00</span><div class="gotoorder" style="background-color:#50a625;font-size:1.2em;text-align:center;line-height: 33px;height: 32px;margin: 1.1em 0px 0px 0.5em;color:#fff;width:100%;max-width:130px;">预订</div></li>
+	<li style="margin:40px 10px 0 0;float:right"><img src="images/Arrow-1.png" style="width:16px;float:right"></li>
+	</ul>
+	</div>
+	</div>
+
+	<div style="background-color:white;border-bottom: 1px solid #D8CBCB;" class="shop2">
+	<table style="margin: 5px 0px 5px 8px;">
+	<tr>
+	<td rowspan="3" style="padding-right: 0.4em;">
+	<img src="images/commodity/commodity_3.jpg" style="width: 90px;height:73px;"/>
+	</td>
+	<td>
+	<div style="margin-top: 0.1em;"><span style="background-color:#faae25;padding: 0.2em 0.5em 0em 0.5em;color:#fff;font-size:0.6em">促销</span><span class="color_title" style="padding-left:0.5em;font-size:0.75em">[买一斤送一斤]上好的顶级青椒</span></div>
+	</td>
+	</tr>
+	<tr>
+	<td style="width:100%">
+	<div>
+	<span style="font-size:0.6em;color:#ff9d00">￥</span><span style="color:#ff9d00;font-size:1em;padding-right:0.4em">3.2</span><span style="text-decoration: line-through;color:#bdbdbd;font-size:0.8em;"><span style="font-size:0.6em;">￥</span>6.78</span>
+		<img src="images/plus.png" style="width:18px;padding:0 0.4em 0 3%;" class="SC_plus"><span style="font-size:1em;color:#323232">1</span><span style="font-size:0.6em;color:#323232">斤</span><img src="images/minus.png" style="width:18px;padding-left: 0.4em;" class="SC_minus">
+		<img src="images/Arrow-2.png" style="width:16px;float:right;margin: 0.5em 0.5em -10px 0px;">
+	</div>
+	</td>
+	</tr>
+	<tr>
+	<td>
+	
+	<div class="gotofavorite" style="background-color:#d0d0d0;font-size:0.8em;text-align:center;color:#50a625;width: 110px;display: inline-block;margin-top: 0.2em;padding: 0.65em 0.6em;">移到收藏夹</div>
+	<img src="images/delete.png" style="width:35px;float:right;margin-right: 15%;" class="SC_delete">
+	
+	</td>
+	</tr>
+	</table>
+	</div>
+	
+	
+
+</div>
+       
+ <script type="text/javascript" src="js/libs/headerinput.js"></script>

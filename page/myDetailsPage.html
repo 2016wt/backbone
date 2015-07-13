@@ -1,0 +1,67 @@
+<!--查看账单-->
+<script>
+	$(function(){
+	
+	});
+</script>
+<style>
+.check_Mge tr td:nth-child(odd)>span{
+  float: right;
+  margin-right:10px;
+   color:#6F6F6F;
+}  
+.check_Mge tr:nth-child(even){
+background-color:#eaeaea;
+}
+.check_Mge tr td:nth-child(even)>span{
+  float: left;
+  margin-left: 10px;
+   color:#484848;
+}
+.check_Mge tr td:nth-child(odd){
+  width: 30%;
+  
+}
+.main_version{
+  margin-top: 15px;
+}
+.main_version>table{
+fond-size:100%;
+}
+.main_version>table>tbody>tr>td>span{
+font-size:0.9em;
+}
+.check_Mge td{
+	border-bottom: 1px solid #CDCDCD;
+	border-right: 1px solid #CDCDCD;
+	height:38px;
+}
+</style>
+<div id="header" data-position="fixed" data-role = "header" data-position = "fixed" style="position: fixed;"data-tap-toggle="false">
+    <div class="left_icon"><a><img class="left_icon_image" src = "images/back.png"/></a></div>
+    <div class="login_header_text">查看订单</div>
+</div>
+<div data-role = "content" class="content">
+	<div class="main_version" style="margin-top: 0px;">
+	     <table class="check_Mge" style="width:100%;body:1px;" cellspacing="0">  
+			<tbody>
+			<tr >
+			
+			<td style="height:40px;"><span>订单编号</span></td>
+			<td style="height:40px;"><span>EWKDFW12312DSF</span></td>	
+		</tr>
+		<tr>			
+			<td><span>&nbsp;&nbsp;收款方&nbsp;&nbsp;</span></td>
+			<td><span>惠农万家</span></td>			
+		</tr>
+		<tr>			
+			<td><span>收款金额</span></td>
+			<td><span>839.00</span></td>			
+		</tr>
+		<tr>			
+			<td><span>时&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;间</span></td>
+			<td><span>2014-1-1</span></td>			
+		</tr>
+
+	</tbody></table></div>
+</div>

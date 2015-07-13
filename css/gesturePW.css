@@ -1,0 +1,88 @@
+.primaryContainer {
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100%;
+    width: 100%;
+}
+
+#gForgetPassword {
+    float: none;
+    font-size: 2.8886151250000003em;
+    width: auto;
+    height: auto;
+    text-align: center;
+    font-weight: normal;
+    line-height: 1em;
+    color: rgb(30, 90, 157);
+    font-style: normal;
+    letter-spacing: normal;
+    text-decoration: none;
+    font-family: 'Microsoft YaHei';
+    position: relative;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    margin: 10% auto 0px;
+    clear: none;
+}
+
+#wrongMessage {
+    float: none;
+    font-size: 3em;
+    width: auto;
+    height: auto;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1em;
+    color: rgb(255, 0, 0);
+    font-style: normal;
+    letter-spacing: normal;
+    text-decoration: none;
+    font-family: 'Microsoft YaHei';
+    position: relative;
+    top: 0px;
+    left: 0px;
+    z-index: 9;
+    margin-top: 2%;
+    margin-left: auto;
+    clear: none;
+    margin-right: auto;
+    text-transform: none;
+}
+
+._9round {
+    float: none;
+    width: auto;
+    height: auto;
+    color: rgb(0, 0, 0);
+    position: relative;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+    background-image:url("img/9round.png");
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    margin: 2% auto 0px;
+    clear: none;
+    max-width: none;
+    min-height: 60em;
+    min-width: 10em;
+}
+
+#avator {
+    float: none;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    color: rgb(0, 0, 0);
+    position: relative;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    margin-top: 20%;
+    margin-left: auto;
+    clear: none;
+    margin-right: auto;
+}
+
